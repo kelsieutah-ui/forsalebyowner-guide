@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sell It Yourself: A Utah County For Sale By Owner Guide</title>
+<meta name="description" content="A complete for-sale-by-owner guide for Utah County. The real tools to price, prep, list, and close on your own home, from a listing agent who wants you to win, with help available whenever you want it.">
+<link rel="canonical" href="https://forsalebyowner.kelsiejimenez.com/">
+<meta property="og:title" content="Sell It Yourself: A Utah County For Sale By Owner Guide">
+<meta property="og:description" content="The real tools to price, prep, list, and close on your own home in Utah County. No gatekeeping, no pressure.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://forsalebyowner.kelsiejimenez.com/">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green:#2B3D30; --dark:#22302A; --green-mid:#3E5547;
+    --sage:#A8A493; --mist:#C9C2AE; --taupe:#B5A88E; --moss:#B7BEA9;
+    --cream:#F2E8D5; --warm:#F6F3EA; --linen:#EFEAE0;
+    --mid:#5C564A; --light:#8A8474; --white:#ffffff; --charcoal:#1C1C1C; --bg:#FDFCFA;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Lato',sans-serif; background:var(--bg); color:var(--charcoal); line-height:1.7; }
+  h1,h2,h3 { font-family:'Playfair Display',serif; }
+
+  .nav-wrap { position:fixed; top:16px; left:16px; right:16px; z-index:100; }
+  .nav-pill { max-width:1100px; margin:0 auto; background:rgba(43,61,48,0.72); backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px); border:1px solid rgba(242,232,213,0.18); box-shadow:0 4px 32px rgba(0,0,0,0.18);
+    border-radius:100px; padding:10px 12px 10px 24px; display:flex; align-items:center; justify-content:space-between; }
+  .nav-back { font-size:13px; color:var(--cream); text-decoration:none; }
+  .nav-cta { background:linear-gradient(135deg, rgba(43,61,48,0.82), rgba(43,61,48,0.62)); border:1px solid rgba(242,232,213,0.45);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,0.25); color:var(--cream); padding:9px 20px; border-radius:100px;
+    font-size:13px; font-weight:500; text-decoration:none; white-space:nowrap; }
+
+  .hero { position:relative; min-height:58vh; display:flex; align-items:center; justify-content:center; text-align:center;
+    padding:140px 24px 86px; background:url('hero.jpg') center 50%/cover no-repeat, var(--green); }
+  .hero::before { content:''; position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(15,20,16,0.52) 0%, rgba(15,20,16,0.44) 60%, rgba(15,20,16,0.40) 100%); }
+  .hero > * { position:relative; z-index:1; }
+  .hero .kicker { font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:rgba(242,232,213,0.85); margin-bottom:14px; }
+  .hero h1 { font-weight:400; font-size:clamp(38px,6vw,64px); line-height:1.1; color:var(--cream); text-shadow:0 2px 18px rgba(0,0,0,0.45); }
+  .hero-bar { position:absolute; left:0; right:0; bottom:0; z-index:2; background:rgba(18,24,19,0.45);
+    backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-top:1px solid rgba(242,232,213,0.16); padding:14px 22px; }
+  .hero-bar p { max-width:760px; margin:0 auto; text-align:center; font-size:13.5px; font-weight:300; color:rgba(242,232,213,0.95); line-height:1.65; }
+
+  .intro-letter { background:var(--warm); border-left:4px solid var(--sage); padding:36px 48px; max-width:900px; margin:0 auto; }
+  .letter-quote { font-size:18px; font-style:italic; color:var(--dark); line-height:1.75; margin-bottom:14px; }
+  .letter-sig { font-size:12px; color:var(--light); letter-spacing:1px; }
+
+  .main { max-width:920px; margin:0 auto; padding:60px 48px 40px; }
+  .section { margin-bottom:56px; }
+  .section-eyebrow { font-size:10px; letter-spacing:4px; text-transform:uppercase; color:var(--sage); font-weight:600; margin-bottom:12px; text-align:center; }
+  .section-title { font-size:32px; font-weight:400; color:var(--dark); line-height:1.16; margin-bottom:16px; text-align:center; }
+  .section-title em { font-style:italic; color:var(--taupe); }
+  .section-body { font-size:15px; color:var(--mid); font-weight:300; line-height:1.85; margin:0 auto 18px; max-width:660px; text-align:center; }
+  .section-body strong { color:var(--dark); font-weight:500; }
+
+  /* JOURNEY CARDS */
+  .steps { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin:30px 0 8px; }
+  .step { background:#fff; border:1px solid #E3DCCB; border-top:3px solid var(--green); border-radius:12px; padding:26px; display:flex; flex-direction:column; }
+  .step .num { font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:var(--sage); font-weight:700; margin-bottom:8px; }
+  .step h3 { font-weight:500; font-size:21px; margin-bottom:8px; }
+  .step p { font-size:14px; font-weight:300; color:#555; line-height:1.7; margin-bottom:18px; }
+  .step a { margin-top:auto; align-self:flex-start; min-width:160px; text-align:center; background:var(--cream); color:var(--green);
+    font-size:13.5px; font-weight:700; padding:12px 22px; border-radius:100px; text-decoration:none; }
+  .step a:hover { background:#EBDFC4; }
+  .step .soon { margin-top:auto; align-self:flex-start; background:#F4F1E8; color:#8A8474; font-size:11px; letter-spacing:0.14em;
+    text-transform:uppercase; padding:8px 16px; border-radius:100px; }
+
+  .alert { padding:22px 26px; margin:24px auto; max-width:680px; font-size:14.5px; line-height:1.8; font-weight:300; }
+  .alert-sage { background:rgba(168,164,147,0.14); border-left:3px solid var(--sage); color:var(--mid); }
+  .alert strong { color:var(--dark); font-weight:600; }
+
+  /* OFF-RAMP BAND */
+  .offramp { background:var(--cream); border-top:1px solid #E4D5BC; padding:74px 48px; text-align:center; }
+  .offramp .eyebrow { font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:var(--green); font-weight:600; margin-bottom:16px; }
+  .offramp h2 { font-size:clamp(28px,3.6vw,42px); font-weight:400; font-style:italic; color:var(--green); line-height:1.18; margin-bottom:16px; font-family:'Times New Roman', Georgia, serif; }
+  .offramp p { font-size:15px; color:#666; font-weight:300; line-height:1.8; max-width:600px; margin:0 auto 30px; }
+  .btn-green { display:inline-block; background:var(--green); color:var(--cream); font-size:14px; font-weight:500; letter-spacing:0.04em;
+    padding:15px 34px; border-radius:100px; text-decoration:none; }
+
+  .kelsie-note { background:var(--green); padding:44px 48px; margin:0; position:relative; overflow:hidden; }
+  .kelsie-note .inner { max-width:760px; margin:0 auto; }
+  .kelsie-note-text { font-style:italic; font-size:18px; color:var(--cream); line-height:1.8; margin-bottom:22px; position:relative; font-family:'Times New Roman', Georgia, serif; }
+  .kelsie-note-sig { font-size:11px; color:var(--mist); letter-spacing:2px; text-transform:uppercase; }
+
+  .cta-wrap { text-align:center; padding:48px 24px 56px; }
+  .cta-btn { display:inline-block; background:var(--green); color:var(--cream); font-size:14px; font-weight:500; letter-spacing:0.04em;
+    padding:15px 30px; border-radius:100px; text-decoration:none; }
+  .cta-btn small { display:block; font-size:10.5px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(242,232,213,0.65); margin-bottom:3px; font-weight:400; }
+  footer { background:var(--dark); padding:30px 48px; text-align:center; }
+  .footer-brand { font-size:16px; color:var(--linen); font-weight:400; letter-spacing:2px; }
+  .footer-meta { font-size:11px; color:rgba(255,255,255,.32); letter-spacing:0.8px; line-height:1.9; margin-top:8px; }
+  .footer-meta a { color:rgba(255,255,255,.5); text-decoration:none; }
+
+  @media (max-width:760px) {
+    .main, .intro-letter, .offramp, footer { padding-left:24px; padding-right:24px; }
+    .steps { grid-template-columns:1fr; }
+    .hero { min-height:52vh; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="nav-wrap">
+    <nav class="nav-pill">
+      <a class="nav-back" href="https://kelsiejimenez.com">&larr; Kelsie Jimenez</a>
+      <a class="nav-cta" href="sms:8014202284">Talk to Kelsie</a>
+    </nav>
+  </div>
+
+  <section class="hero">
+    <div>
+      <p class="kicker">For Sale By Owner &middot; Utah County</p>
+      <h1>Sell It <em style="font-style:italic;font-family:'Times New Roman',Georgia,serif;">Yourself</em></h1>
+    </div>
+    <div class="hero-bar"><p>You can absolutely sell your own home. If that's your goal, here are the same tools I use with my sellers, and someone in your corner who wants you to win.</p></div>
+  </section>
+
+  <div class="intro-letter">
+    <div class="letter-quote">"Let me say the part most agents won't. You do not need me to sell your house. People sell their own homes all the time, and if that's what you want, I would rather hand you everything you need to do it well than watch you guess. So that's what this is. Real tools, no gatekeeping, no pressure. Use what helps. And if you ever want a hand, you know where to find me."</div>
+    <div class="letter-sig">Kelsie Jimenez</div>
+  </div>
+
+  <div class="main">
+
+    <!-- YOU'VE GOT THIS -->
+    <div class="section">
+      <div class="section-eyebrow">Start Here</div>
+      <h2 class="section-title">You Can <em>Do This</em></h2>
+      <p class="section-body">Selling your home yourself is a real, doable thing. It's also a job with a few moving parts, so the point of this guide is to make each part simple and to be honest about what it takes.</p>
+      <p class="section-body">Work through it at your own pace. Nothing here is a pitch. It's the actual playbook I use, handed to you.</p>
+    </div>
+
+    <!-- THE TOOLS -->
+    <div class="section">
+      <div class="section-eyebrow">The Toolkit</div>
+      <h2 class="section-title">Your Step-by-Step <em>Tools</em></h2>
+      <p class="section-body">Each one stands on its own. Start wherever you are in the process.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="num">Step One</div>
+          <h3>Price It Right</h3>
+          <p>How to sanity-check any price, including mine. Solds versus actives, the adjustments people skip, and a quick worksheet to ballpark your number.</p>
+          <a href="diy-cma.html">Open the Quick CMA &rarr;</a>
+        </div>
+        <div class="step">
+          <div class="num">Step Two</div>
+          <h3>Know Your Numbers</h3>
+          <p>What you actually walk away with. Net out payoffs, fees, and concessions, and compare offers by real proceeds instead of the top-line price.</p>
+          <a href="seller-net-sheet.html">Run Your Numbers &rarr;</a>
+        </div>
+        <div class="step">
+          <div class="num">Step Three</div>
+          <h3>Prep It to Show</h3>
+          <p>What buyers' inspectors flag, what to fix versus disclose, lighting and decor, and where prep money actually comes back. Room by room.</p>
+          <a href="listing-prep.html">Read the Guide &rarr;</a>
+        </div>
+        <div class="step">
+          <div class="num">Step Four</div>
+          <h3>Paint &amp; Color</h3>
+          <p>The neutrals and whites that photograph best, the front door insight, and a simple sheen cheat sheet so the right finish goes on the right surface.</p>
+          <a href="paint-guide.html">Open the Paint Guide &rarr;</a>
+        </div>
+        <div class="step">
+          <div class="num">Step Five</div>
+          <h3>Understand the Contract</h3>
+          <p>The Utah purchase contract in plain language, so you know exactly what an offer is asking you to agree to before you sign it.</p>
+          <a href="repc-walkthrough.html">Watch the Walkthrough &rarr;</a>
+        </div>
+        <div class="step">
+          <div class="num">Coming Soon</div>
+          <h3>Disclosures, Offers &amp; Closing</h3>
+          <p>Filling out your seller disclosure honestly, getting your home seen, reading and comparing offers, and the deadline calendar from accepted offer to keys.</p>
+          <span class="soon">In progress</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- HONEST -->
+    <div class="section">
+      <div class="section-eyebrow">The Honest Part</div>
+      <h2 class="section-title">Is Doing It Yourself <em>Right for You?</em></h2>
+      <p class="section-body">Selling on your own can save you real money. It also asks for your time, a willingness to handle paperwork and strangers in your home, and a clear head when offers and inspections get tense.</p>
+      <div class="alert alert-sage">
+        None of that is beyond you. But before you start, it's worth being honest with yourself about two things: <strong>your time</strong> and <strong>your timeline.</strong> If you have both, this guide will carry you the whole way. If one of them is tight, that's good to know now, not three weeks in.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- OFF-RAMP -->
+  <div class="offramp">
+    <p class="eyebrow">If You Want a Hand</p>
+    <h2>This was never all or nothing.</h2>
+    <p>Maybe you start and realize you'd rather not do it alone. Maybe your timeline just got real. That isn't failing, it's just information. Whenever you want, here's how I can step in, at whatever level you actually need.</p>
+    <a class="btn-green" href="seller-advantage.html">See the Seller Advantage Program &rarr;</a>
+  </div>
+
+  <!-- KELSIE NOTE -->
+  <div class="kelsie-note">
+    <div class="inner">
+      <div class="kelsie-note-text">"I would rather you sell your home yourself and keep more of your money than talk you out of it to win a listing. That's the whole reason this guide exists. Use it. And if you want me, I'm one text away."</div>
+      <div class="kelsie-note-sig">Kelsie Jimenez &nbsp;&middot;&nbsp; 801.420.2284</div>
+    </div>
+  </div>
+
+  <div class="cta-wrap">
+    <a class="cta-btn" href="sms:8014202284"><small>A question, not a commitment?</small>Text me anytime &rarr;</a>
+  </div>
+
+  <footer>
+    <div class="footer-brand">Kelsie Jimenez</div>
+    <div class="footer-meta">The Perry Group &middot; Real Broker LLC &middot; License #11407496-SA00<br><a href="tel:8014202284">(801) 420-2284</a> &middot; <a href="https://kelsiejimenez.com">kelsiejimenez.com</a></div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://forsalebyowner.kelsiejimenez.com/sitemap.xml
