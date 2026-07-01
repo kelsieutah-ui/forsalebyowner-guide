@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --green:#2B3D30; --dark:#22302A; --green-mid:#3E5547;
+    --green:#2B3D30; --dark:#22302A; --green-mid:#3E5547; --bar:#1b2620;
     --sage:#A8A493; --mist:#C9C2AE; --taupe:#B5A88E; --moss:#B7BEA9;
     --cream:#F2E8D5; --warm:#F6F3EA; --linen:#EFEAE0;
     --mid:#5C564A; --light:#8A8474; --white:#ffffff; --charcoal:#1C1C1C; --bg:#FDFCFA;
@@ -35,16 +35,15 @@
   .hero { position:relative; min-height:74vh; display:flex; align-items:center; justify-content:center; text-align:center;
     padding:140px 24px 86px; background:url('hero.jpg') center 42%/cover no-repeat, var(--green); }
   .hero::before { content:''; position:absolute; inset:0;
-    background:linear-gradient(180deg, rgba(15,20,16,0.52) 0%, rgba(15,20,16,0.44) 60%, rgba(15,20,16,0.40) 100%); }
+    background:linear-gradient(180deg, rgba(18,22,18,.50) 0%, rgba(18,22,18,.26) 38%, rgba(18,22,18,.18) 62%, rgba(18,22,18,.30) 100%); }
   .hero > * { position:relative; z-index:1; }
   .hero .kicker { font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:rgba(242,232,213,0.85); margin-bottom:14px; }
   .hero h1 { font-weight:400; font-size:clamp(38px,6vw,64px); line-height:1.1; color:var(--cream); text-shadow:0 2px 18px rgba(0,0,0,0.45); }
-  .hero-bar { position:absolute; left:0; right:0; bottom:0; z-index:2; background:rgba(18,24,19,0.45);
-    backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-top:1px solid rgba(242,232,213,0.16); padding:14px 22px; }
-  .hero-bar p { max-width:760px; margin:0 auto; text-align:center; font-size:13.5px; font-weight:300; color:rgba(242,232,213,0.95); line-height:1.65; }
+  .hero-bar { position:absolute; left:0; right:0; bottom:0; z-index:2; background:var(--bar); padding:22px 24px; }
+  .hero-bar p { max-width:760px; margin:0 auto; text-align:center; font-family:'Times New Roman',Times,serif; font-size:16px; color:var(--cream); line-height:1.5; }
 
   .intro-letter { background:var(--warm); border-left:4px solid var(--sage); padding:36px 48px; max-width:900px; margin:0 auto; }
-  .letter-quote { font-size:18px; font-style:italic; color:var(--dark); line-height:1.75; margin-bottom:14px; }
+  .letter-quote { font-family:'Playfair Display',serif; font-size:18px; font-style:italic; color:var(--dark); line-height:1.75; margin-bottom:14px; }
   .letter-sig { font-size:12px; color:var(--light); letter-spacing:1px; }
 
   .main { max-width:920px; margin:0 auto; padding:60px 48px 40px; }
@@ -52,7 +51,7 @@
   .section-eyebrow { font-size:10px; letter-spacing:4px; text-transform:uppercase; color:var(--sage); font-weight:600; margin-bottom:12px; text-align:center; }
   .section-title { font-size:32px; font-weight:400; color:var(--dark); line-height:1.16; margin-bottom:16px; text-align:center; }
   .section-title em { font-style:italic; color:var(--taupe); }
-  .section-body { font-size:15px; color:var(--mid); font-weight:300; line-height:1.85; margin:0 auto 18px; max-width:660px; text-align:center; }
+  .section-body { font-family:'Times New Roman',Times,serif; font-size:15px; color:var(--mid); font-weight:300; line-height:1.85; margin:0 auto 18px; max-width:660px; text-align:center; }
   .section-body strong { color:var(--dark); font-weight:500; }
 
   /* JOURNEY CARDS */
@@ -60,14 +59,14 @@
   .step { background:#fff; border:1px solid #E3DCCB; border-top:3px solid var(--green); border-radius:12px; padding:26px; display:flex; flex-direction:column; }
   .step .num { font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:var(--sage); font-weight:700; margin-bottom:8px; }
   .step h3 { font-weight:500; font-size:21px; margin-bottom:8px; }
-  .step p { font-size:14px; font-weight:300; color:#555; line-height:1.7; margin-bottom:18px; }
+  .step p { font-family:'Times New Roman',Times,serif; font-size:14px; font-weight:300; color:#555; line-height:1.7; margin-bottom:18px; }
   .step a { margin-top:auto; align-self:flex-start; min-width:160px; text-align:center; background:var(--cream); color:var(--green);
     font-size:13.5px; font-weight:700; padding:12px 22px; border-radius:100px; text-decoration:none; }
   .step a:hover { background:#EBDFC4; }
   .step .soon { margin-top:auto; align-self:flex-start; background:#F4F1E8; color:#8A8474; font-size:11px; letter-spacing:0.14em;
     text-transform:uppercase; padding:8px 16px; border-radius:100px; }
 
-  .alert { padding:22px 26px; margin:24px auto; max-width:680px; font-size:14.5px; line-height:1.8; font-weight:300; }
+  .alert { font-family:'Times New Roman',Times,serif; padding:22px 26px; margin:24px auto; max-width:680px; font-size:14.5px; line-height:1.8; font-weight:300; }
   .alert-sage { background:rgba(168,164,147,0.14); border-left:3px solid var(--sage); color:var(--mid); }
   .alert strong { color:var(--dark); font-weight:600; }
 
@@ -75,7 +74,7 @@
   .offramp { background:var(--cream); border-top:1px solid #E4D5BC; padding:74px 48px; text-align:center; }
   .offramp .eyebrow { font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:var(--green); font-weight:600; margin-bottom:16px; }
   .offramp h2 { font-size:clamp(28px,3.6vw,42px); font-weight:400; font-style:italic; color:var(--green); line-height:1.18; margin-bottom:16px; font-family:'Playfair Display', serif; }
-  .offramp p { font-size:15px; color:#666; font-weight:300; line-height:1.8; max-width:600px; margin:0 auto 30px; }
+  .offramp p { font-family:'Times New Roman',Times,serif; font-size:15px; color:#666; font-weight:300; line-height:1.8; max-width:600px; margin:0 auto 30px; }
   .btn-green { display:inline-block; background:var(--green); color:var(--cream); font-size:14px; font-weight:500; letter-spacing:0.04em;
     padding:15px 34px; border-radius:100px; text-decoration:none; }
 
@@ -97,7 +96,7 @@
   .nextband .eyebrow { font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:var(--sage); font-weight:600; margin-bottom:16px; }
   .nextband h2 { font-size:clamp(26px,3.4vw,38px); font-weight:400; color:var(--dark); line-height:1.2; margin-bottom:16px; font-family:'Playfair Display',serif; }
   .nextband h2 em { font-style:italic; color:var(--taupe); }
-  .nextband p { font-size:15px; color:#666; font-weight:300; line-height:1.8; max-width:600px; margin:0 auto 28px; }
+  .nextband p { font-family:'Times New Roman',Times,serif; font-size:15px; color:#666; font-weight:300; line-height:1.8; max-width:600px; margin:0 auto 28px; }
   .btn-outline { display:inline-block; border:1px solid var(--green); color:var(--green); font-size:14px; font-weight:500; padding:14px 32px; border-radius:100px; text-decoration:none; }
   .btn-outline:hover { background:var(--green); color:var(--cream); }
 
