@@ -72,7 +72,16 @@
     padding:15px 30px; border-radius:100px; text-decoration:none; }
   .cta a small { display:block; font-size:10.5px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(242,232,213,0.65); margin-bottom:3px; }
   @media (max-width:760px) { .offers { grid-template-columns:1fr; } .frow { grid-template-columns:1fr; } .hero { min-height:42vh; } }
-</style>
+
+  /* italic-accent-fix: 2026-07-03 */
+  /* Italic display accents use Times New Roman. Playfair Display italic capitals (Q, J, Z) render poorly. */
+  h1 em, h2 em, h3 em, h4 em, h5 em, h6 em,
+  .section-title em, .nextband h2 em, .w-hero h2 em, .offramp h2,
+  .pull, .letter-quote, .kelsie-note-text, .opt__no {
+    font-family: 'Times New Roman', Georgia, serif;
+    font-style: italic;
+  }
+  </style>
 </head>
 <body>
   <div class="nav-wrap">
