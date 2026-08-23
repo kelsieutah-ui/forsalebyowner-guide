@@ -51,6 +51,18 @@
   .hero-bar { position:absolute; left:0; right:0; bottom:0; z-index:2; background:var(--bar); padding:22px 24px; }
   .hero-bar p { max-width:760px; margin:0 auto; text-align:center; font-family:'Times New Roman',Times,serif; font-size:16px; color:var(--cream); line-height:1.5; }
 
+  /* QUICK NAV */
+  .quicknav { background:var(--warm); border-bottom:1px solid rgba(0,0,0,0.06); padding:22px 24px 26px; text-align:center; }
+  .quicknav .promise { font-size:12px; letter-spacing:0.13em; text-transform:uppercase; color:var(--sage); font-weight:600; margin:0 0 16px; }
+  .quicknav .qlinks { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; max-width:820px; margin:0 auto; }
+  .quicknav .qlinks a { display:block; background:#fff; border:1px solid var(--sage); border-radius:999px;
+    padding:11px 20px; font-size:14px; color:var(--green); text-decoration:none; line-height:1.2; }
+  .quicknav .qlinks a:hover { background:var(--green); color:var(--cream); border-color:var(--green); }
+  @media (max-width:600px) {
+    .quicknav .qlinks { gap:8px; }
+    .quicknav .qlinks a { flex:1 1 46%; padding:12px 10px; font-size:13.5px; }
+  }
+
   .intro-letter { background:var(--warm); border-left:4px solid var(--sage); padding:36px 48px; max-width:900px; margin:0 auto; }
   .letter-quote { font-family:'Playfair Display',serif; font-size:18px; font-style:italic; color:var(--dark); line-height:1.75; margin-bottom:14px; }
   .letter-sig { font-size:12px; color:var(--light); letter-spacing:1px; }
@@ -181,9 +193,16 @@
     <div class="hero-bar"><p>You can absolutely sell your own home. If that's your goal, here are the real tools to do it well, and someone in your corner who wants you to win.</p></div>
   </section>
 
-  <div class="intro-letter">
-    <div class="letter-quote">"Let me say the part most agents won't. You do not need me to sell your house. People sell their own homes all the time, and if that's what you want, I would rather hand you everything you need to do it well than watch you guess. So that's what this is. Real tools, no gatekeeping, no pressure. Use what helps. And if you ever want a hand, you know where to find me."</div>
-    <div class="letter-sig">Kelsie Jimenez</div>
+  <!-- QUICK NAV -->
+  <div class="quicknav">
+    <p class="promise">Free &middot; No email &middot; No signup &middot; Nothing to unlock</p>
+    <div class="qlinks">
+      <a href="diy-cma.html">Price it right</a>
+      <a href="seller-net-sheet.html">What you'll net</a>
+      <a href="repc-walkthrough.html">The contract</a>
+      <a href="disclosures.html">Disclosures</a>
+      <a href="settlement-day.html">Closing day</a>
+    </div>
   </div>
 
   <div class="main">
@@ -252,6 +271,12 @@
           <a href="settlement-day.html">Read the Closing Guide &rarr;</a>
         </div>
       </div>
+    </div>
+
+    <!-- A NOTE FROM KELSIE -->
+    <div class="intro-letter">
+      <div class="letter-quote">"Let me say the part most agents won't. You do not need me to sell your house. People sell their own homes all the time, and if that's what you want, I would rather hand you everything you need to do it well than watch you guess. So that's what this is. Real tools, no gatekeeping, no pressure. Use what helps. And if you ever want a hand, you know where to find me."</div>
+      <div class="letter-sig">Kelsie Jimenez</div>
     </div>
 
 
