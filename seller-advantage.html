@@ -19,85 +19,19 @@
 <meta property="og:description" content="Three flexible levels of listing support for Utah County sellers. Pick the level that fits. Cancel anytime.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://forsalebyowner.kelsiejimenez.com/seller-advantage.html">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="guide.css">
 <style>
-  :root {
-    --green:#2B3D30; --dark:#22302A; --green-mid:#3E5547;
-    --sage:#A8A493; --mist:#C9C2AE; --taupe:#B5A88E; --moss:#B7BEA9;
-    --cream:#F2E8D5; --warm:#F6F3EA; --linen:#EFEAE0;
-    --mid:#5C564A; --light:#8A8474; --white:#ffffff; --charcoal:#1C1C1C; --bg:#FDFCFA;
-  }
-  * { margin:0; padding:0; box-sizing:border-box; }
-  html { scroll-behavior:smooth; }
-  body { font-family:'Lato',sans-serif; background:var(--bg); color:var(--charcoal); line-height:1.7; }
-  h1,h2,h3 { font-family:'Playfair Display',serif; }
-
-  .nav-wrap { position:fixed; top:16px; left:16px; right:16px; z-index:100; }
-  .nav-pill { max-width:1100px; margin:0 auto; background:rgba(43,61,48,0.72); backdrop-filter:blur(12px);
-    -webkit-backdrop-filter:blur(12px); border:1px solid rgba(242,232,213,0.18); box-shadow:0 4px 32px rgba(0,0,0,0.18);
-    border-radius:100px; padding:10px 12px 10px 24px; display:flex; align-items:center; justify-content:space-between; }
-  .nav-back { font-size:13px; color:var(--cream); text-decoration:none; }
-  .nav-cta { background:linear-gradient(135deg, rgba(43,61,48,0.82), rgba(43,61,48,0.62)); border:1px solid rgba(242,232,213,0.45);
-    box-shadow:inset 0 1px 0 rgba(255,255,255,0.25); color:var(--cream); padding:9px 20px; border-radius:100px;
-    font-size:13px; font-weight:500; text-decoration:none; white-space:nowrap; }
-
-  .hero { text-align:center; padding:140px 24px 56px; background:var(--green); }
-  .hero .kicker { font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:var(--mist); margin-bottom:16px; }
-  .hero h1 { font-weight:400; font-size:clamp(34px,5vw,56px); line-height:1.12; color:var(--cream); }
-  .hero h1 em { font-style:italic; font-family:'Playfair Display', serif; color:#fff; }
-  .hero p { max-width:680px; margin:20px auto 0; font-size:15px; font-weight:300; color:rgba(242,232,213,0.9); line-height:1.8; }
-
-  .intro { max-width:760px; margin:0 auto; padding:56px 48px 8px; text-align:center; }
-  .intro p { font-size:16px; color:var(--mid); font-weight:300; line-height:1.85; margin-bottom:16px; }
-  .intro strong { color:var(--dark); font-weight:600; }
-
-  .tiers-wrap { max-width:1120px; margin:0 auto; padding:36px 32px 16px; }
-  .tiers { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
-  .tier { background:#fff; border:1px solid #DDD6C4; border-radius:16px; overflow:hidden; display:flex; flex-direction:column; box-shadow:0 10px 30px rgba(43,61,48,0.06); }
-  .tier-head { background:var(--moss); padding:30px 26px 26px; text-align:center; }
-  .tier-name { font-family:'Lato',sans-serif; font-size:14px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:var(--green); margin-bottom:14px; }
-  .tier-pct { font-family:'Playfair Display',serif; font-size:52px; font-weight:500; color:var(--dark); line-height:1; }
-  .tier-of { font-size:12px; font-style:italic; color:var(--green-mid); margin-top:6px; }
-  .tier-tag { font-size:14.5px; color:var(--dark); margin-top:12px; line-height:1.5; font-weight:400; }
-  .tier-body { padding:26px 26px 0; flex:1; display:flex; flex-direction:column; }
-  .tier-feats { list-style:none; margin-bottom:22px; }
-  .tier-feats li { font-size:14px; color:#3f3f3f; padding:7px 0 7px 22px; position:relative; line-height:1.5; }
-  .tier-feats li::before { content:''; position:absolute; left:2px; top:14px; width:6px; height:6px; border-radius:50%; background:var(--sage); }
-  .tier-terms { margin-top:auto; border-top:1px solid #ECE6D8; padding:18px 0 4px; font-size:12.5px; color:var(--light); font-weight:300; line-height:1.7; }
-  .tier-terms strong { color:var(--dark); font-weight:700; }
-  .tier-fee { padding:16px 26px 26px; }
-  .tier-fee span { display:block; font-size:13px; color:var(--green); font-weight:700; }
-
-  .bottomline { max-width:880px; margin:24px auto 0; padding:30px 48px; text-align:center; }
-  .bottomline p { font-family:'Playfair Display',serif; font-size:clamp(20px,2.6vw,26px); font-weight:500; color:var(--dark); line-height:1.4; }
-  .finep { max-width:760px; margin:14px auto 0; padding:0 48px; text-align:center; font-size:12px; color:var(--light); font-weight:300; line-height:1.7; }
-
-  .reassure { background:var(--warm); border-top:1px solid #E9E2D2; border-bottom:1px solid #E9E2D2; margin-top:44px; padding:48px 48px; text-align:center; }
-  .reassure p { max-width:640px; margin:0 auto; font-size:16px; font-style:italic; color:var(--dark); line-height:1.8; font-family:'Playfair Display', serif; }
-
-  .cta-wrap { text-align:center; padding:52px 24px 58px; }
-  .cta-btn { display:inline-block; background:var(--green); color:var(--cream); font-size:14px; font-weight:500; letter-spacing:0.04em;
-    padding:16px 34px; border-radius:100px; text-decoration:none; }
-  .cta-btn small { display:block; font-size:10.5px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(242,232,213,0.65); margin-bottom:3px; font-weight:400; }
-  .back-link { display:block; text-align:center; margin-top:22px; font-size:13px; color:var(--light); text-decoration:none; }
-
-  footer { background:var(--dark); padding:34px 48px; text-align:center; }
-  .footer-brand { font-size:16px; color:var(--linen); font-weight:400; letter-spacing:2px; }
-  .footer-meta { font-size:11px; color:rgba(255,255,255,.34); letter-spacing:0.8px; line-height:1.9; margin-top:8px; }
-  .footer-meta a { color:rgba(255,255,255,.5); text-decoration:none; }
-
-  @media (max-width:900px) { .tiers { grid-template-columns:1fr; max-width:460px; margin:0 auto; } }
-  @media (max-width:760px) { .intro, .tiers-wrap, .reassure, footer, .bottomline { padding-left:24px; padding-right:24px; } }
-
-  /* italic-accent-fix: 2026-07-03 */
-  /* Italic display accents use Times New Roman. Playfair Display italic capitals (Q, J, Z) render poorly. */
-  h1 em, h2 em, h3 em, h4 em, h5 em, h6 em,
-  .section-title em, .nextband h2 em, .w-hero h2 em, .offramp h2,
-  .pull, .letter-quote, .kelsie-note-text, .opt__no {
-    font-family: 'Times New Roman', Georgia, serif;
-    font-style: italic;
-  }
-  </style>
+  /* Page-specific: tier pricing line */
+  .tier-price{font-family:var(--display);font-size:clamp(2.4rem,5vw,3.2rem);font-weight:500;
+    line-height:1;color:var(--forest);margin:0 0 6px;}
+  .tier-price em{font-family:'Times New Roman',Georgia,serif;font-style:italic;font-size:1rem;
+    color:var(--ink-soft);display:block;margin-top:8px;}
+  .tier-fee{font-family:var(--util);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;
+    font-weight:700;color:var(--forest);margin:14px 0 0;}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -141,144 +75,146 @@
 </script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-  <div class="nav-wrap">
-    <nav class="nav-pill">
-      <a class="nav-back" href="index.html">&larr; Back to the Guide</a>
-      <a class="nav-cta" href="sms:8014202284">Talk to Kelsie</a>
-    </nav>
-  </div>
+<header class="topbar"><div class="wrap"><a class="brand" href="/">Kelsie Jimenez<span class="brand-sub">For Sale By Owner</span></a>
+<nav><a href="diy-cma.html">Pricing</a><a href="repc-walkthrough.html">Contract</a><a href="sms:8014202284">Text Kelsie</a></nav></div></header>
 
-  <section class="hero">
-    <p class="kicker">If You Want a Hand</p>
+<section class="hero-plain">
+  <div class="wrap read">
+    <span class="hero-eyebrow">If You Want a Hand</span>
     <h1>The Seller Advantage <em>Program</em></h1>
-    <p>You worked through the tools. If selling on your own starts to feel like a lot, or your timeline just got real, here's how I can step in, at whatever level you actually need.</p>
-  </section>
+    <p class="lede">You worked through the tools. If selling on your own starts to feel like a lot, or your timeline just got real, here's how I can step in, at whatever level you actually need.</p>
+  </div>
+</section>
 
-  <div class="intro">
-    <p>First, the important part: <strong>deciding you want help is not failing.</strong> It's just information about your time and your timeline, and both are allowed to change.</p>
+<main id="main">
+
+<section>
+  <div class="wrap read">
+    <p class="lede">First, the important part: <strong>deciding you want help is not failing.</strong> It's just information about your time and your timeline, and both are allowed to change.</p>
     <p>So here are three levels. Some sellers want me to handle everything. Some just want the listing muscle and will run the rest themselves. Pick the one that fits where you actually are. You can move up, and you can cancel anytime.</p>
   </div>
+</section>
 
-  <div class="tiers-wrap">
-    <div class="tiers">
-
-      <!-- ESSENTIALS -->
-      <div class="tier">
-        <div class="tier-head">
-          <div class="tier-name">Essentials</div>
-          <div class="tier-pct">2%</div>
-          <div class="tier-of">of sale price</div>
-          <div class="tier-tag">Everything you need to list well.</div>
-        </div>
-        <div class="tier-body">
-          <ul class="tier-feats">
-            <li>Pre-listing walkthrough</li>
-            <li>Professional photography</li>
-            <li>Market analysis</li>
-            <li>Manual lock box</li>
-            <li>Basic yard sign</li>
-            <li>Listed on MLS + 500 sites</li>
-            <li>24/7 showing service</li>
-            <li>Contract negotiation</li>
-          </ul>
-          <div class="tier-terms">
-            Seller shows unrepresented buyers. If Kelsie brings the buyer, <strong>1%</strong> fee added at closing. Buyer agent fees negotiated with offers.
-          </div>
-        </div>
-        <div class="tier-fee"><span>$695 transaction fee at closing</span></div>
+<section>
+  <div class="wrap read">
+    <!-- ESSENTIALS -->
+    <div class="step">
+      <div class="step-num">Essentials</div>
+      <p class="tier-price">2%<em>of sale price</em></p>
+      <h3>Everything you need to list well.</h3>
+      <ul>
+        <li>Pre-listing walkthrough</li>
+        <li>Professional photography</li>
+        <li>Market analysis</li>
+        <li>Manual lock box</li>
+        <li>Basic yard sign</li>
+        <li>Listed on MLS + 500 sites</li>
+        <li>24/7 showing service</li>
+        <li>Contract negotiation</li>
+      </ul>
+      <div class="panel">
+        <p class="fine">Seller shows unrepresented buyers. If Kelsie brings the buyer, <strong>1%</strong> fee added at closing. Buyer agent fees negotiated with offers.</p>
       </div>
+      <p class="tier-fee">$695 transaction fee at closing</p>
+    </div>
 
-      <!-- PLUS -->
-      <div class="tier">
-        <div class="tier-head">
-          <div class="tier-name">Plus</div>
-          <div class="tier-pct">2.5%</div>
-          <div class="tier-of">of sale price</div>
-          <div class="tier-tag">Everything in Essentials, plus</div>
-        </div>
-        <div class="tier-body">
-          <ul class="tier-feats">
-            <li>Video &amp; drone footage</li>
-            <li>Smart lock box</li>
-            <li>Featured open house</li>
-            <li>Weekly social media ads</li>
-            <li>KSL featured placement</li>
-            <li>Upgraded yard sign</li>
-            <li>75 moving bins</li>
-          </ul>
-          <div class="tier-terms">
-            Brokerage shows unrepresented buyers. If Kelsie brings the buyer, <strong>.5%</strong> fee added at closing. Buyer agent fees negotiated with offers.
-          </div>
-        </div>
-        <div class="tier-fee"><span>$395 transaction fee at closing</span></div>
+    <!-- PLUS -->
+    <div class="step">
+      <div class="step-num">Plus</div>
+      <p class="tier-price">2.5%<em>of sale price</em></p>
+      <h3>Everything in Essentials, plus</h3>
+      <ul>
+        <li>Video &amp; drone footage</li>
+        <li>Smart lock box</li>
+        <li>Featured open house</li>
+        <li>Weekly social media ads</li>
+        <li>KSL featured placement</li>
+        <li>Upgraded yard sign</li>
+        <li>75 moving bins</li>
+      </ul>
+      <div class="panel">
+        <p class="fine">Brokerage shows unrepresented buyers. If Kelsie brings the buyer, <strong>.5%</strong> fee added at closing. Buyer agent fees negotiated with offers.</p>
       </div>
+      <p class="tier-fee">$395 transaction fee at closing</p>
+    </div>
 
-      <!-- MAX -->
-      <div class="tier">
-        <div class="tier-head">
-          <div class="tier-name">Max</div>
-          <div class="tier-pct">3%</div>
-          <div class="tier-of">of sale price</div>
-          <div class="tier-tag">Everything in Plus, plus</div>
-        </div>
-        <div class="tier-body">
-          <ul class="tier-feats">
-            <li>Zillow Showcase listing</li>
-            <li>Interactive 3D home tour</li>
-            <li>Virtual staging</li>
-            <li>Weekly market updates</li>
-            <li>Paid social media ads</li>
-            <li>Multiple open houses</li>
-            <li>Premium yard sign</li>
-            <li>2-day moving truck</li>
-          </ul>
-          <div class="tier-terms">
-            Brokerage shows unrepresented buyers. If Kelsie brings the buyer, no added fee. Buyer agent fees negotiated with offers.
-          </div>
-        </div>
-        <div class="tier-fee"><span>Transaction fee waived</span></div>
+    <!-- MAX -->
+    <div class="step">
+      <div class="step-num">Max</div>
+      <p class="tier-price">3%<em>of sale price</em></p>
+      <h3>Everything in Plus, plus</h3>
+      <ul>
+        <li>Zillow Showcase listing</li>
+        <li>Interactive 3D home tour</li>
+        <li>Virtual staging</li>
+        <li>Weekly market updates</li>
+        <li>Paid social media ads</li>
+        <li>Multiple open houses</li>
+        <li>Premium yard sign</li>
+        <li>2-day moving truck</li>
+      </ul>
+      <div class="panel">
+        <p class="fine">Brokerage shows unrepresented buyers. If Kelsie brings the buyer, no added fee. Buyer agent fees negotiated with offers.</p>
       </div>
-
+      <p class="tier-fee">Transaction fee waived</p>
     </div>
   </div>
+</section>
 
-  <div class="bottomline">
-    <p>Cancel anytime. Zillow reports Showcase listings sell for about 2% more on average than similar non-Showcase listings.</p>
+<section>
+  <div class="wrap read">
+    <p class="pull">Cancel anytime. Zillow reports Showcase listings sell for about 2% more on average than similar non-Showcase listings.</p>
+    <div class="panel">
+      <p class="fine">All commissions and fees are negotiable and set by written agreement. Program details may be adjusted to fit your situation. Buyer agent compensation, if any, is negotiated separately with each offer.</p>
+    </div>
   </div>
-  <p class="finep">All commissions and fees are negotiable and set by written agreement. Program details may be adjusted to fit your situation. Buyer agent compensation, if any, is negotiated separately with each offer.</p>
+</section>
 
-  <div class="reassure">
-    <p>"No pressure either way. The tools in this guide are yours to keep, whether you sell it yourself or hand me the keys. This is just here for the day you'd rather not do it alone."</p>
+<section class="band-warm">
+  <div class="wrap read">
+    <p class="pull">"No pressure either way. The tools in this guide are yours to keep, whether you sell it yourself or hand me the keys. This is just here for the day you'd rather not do it alone."</p>
   </div>
+</section>
 
-  <div class="cta-wrap">
-    <a class="cta-btn" href="sms:8014202284"><small>Wondering which level fits?</small>Text me and let's talk it through &rarr;</a>
-    <a class="back-link" href="index.html">&larr; Back to the guide</a>
+<section>
+  <div class="wrap read">
+    <span class="label">Wondering which level fits?</span>
+    <p><a class="ed-link" href="sms:8014202284">Text me and let's talk it through &rarr;</a></p>
+    <p><a class="ed-link" href="index.html">&larr; Back to the guide</a></p>
   </div>
+</section>
 
-  
+</main>
+
 <!-- GUIDE CROSS-LINKS -->
-<nav class="guide-nav" aria-label="More in this guide" style="background:#F6F3EA; border-top:1px solid #E3DCCB; padding:44px 24px;">
-  <div style="max-width:660px; margin:0 auto;">
-    <h2 style="font-family:'Playfair Display',serif; font-weight:400; font-size:22px; color:#2B3D30; margin:0 0 14px;">More in the Utah FSBO guide</h2>
-    <ul style="list-style:none; margin:0; padding:0;">
-      <li style="padding:7px 0; border-top:1px solid #E3DCCB;"><a href="index.html" style="color:#2B3D30; text-decoration:none; font-family:'Times New Roman',Times,serif; font-size:15px;">Start here: how to sell a house by owner in Utah</a></li>
-      <li style="padding:7px 0; border-top:1px solid #E3DCCB;"><a href="diy-cma.html" style="color:#2B3D30; text-decoration:none; font-family:'Times New Roman',Times,serif; font-size:15px;">Price it: run your own CMA</a></li>
-      <li style="padding:7px 0; border-top:1px solid #E3DCCB;"><a href="seller-net-sheet.html" style="color:#2B3D30; text-decoration:none; font-family:'Times New Roman',Times,serif; font-size:15px;">Net sheet: what you walk away with</a></li>
-      <li style="padding:7px 0; border-top:1px solid #E3DCCB;"><a href="listing-prep.html" style="color:#2B3D30; text-decoration:none; font-family:'Times New Roman',Times,serif; font-size:15px;">Prep it: room by room</a></li>
-      <li style="padding:7px 0; border-top:1px solid #E3DCCB;"><a href="paint-guide.html" style="color:#2B3D30; text-decoration:none; font-family:'Times New Roman',Times,serif; font-size:15px;">Paint colors that sell</a></li>
-      <li style="padding:7px 0; border-top:1px solid #E3DCCB;"><a href="market-your-home.html" style="color:#2B3D30; text-decoration:none; font-family:'Times New Roman',Times,serif; font-size:15px;">Market it: getting your listing seen</a></li>
-      <li style="padding:7px 0; border-top:1px solid #E3DCCB;"><a href="repc-walkthrough.html" style="color:#2B3D30; text-decoration:none; font-family:'Times New Roman',Times,serif; font-size:15px;">The REPC, explained</a></li>
-      <li style="padding:7px 0; border-top:1px solid #E3DCCB;"><a href="disclosures.html" style="color:#2B3D30; text-decoration:none; font-family:'Times New Roman',Times,serif; font-size:15px;">Utah disclosure requirements</a></li>
-      <li style="padding:7px 0; border-top:1px solid #E3DCCB;"><a href="settlement-day.html" style="color:#2B3D30; text-decoration:none; font-family:'Times New Roman',Times,serif; font-size:15px;">Closing day, start to finish</a></li>
-    </ul>
+<nav class="guide-nav" aria-label="More in this guide">
+  <div class="wrap read">
+    <span class="label">More in the Utah FSBO guide</span>
+    <a href="index.html">Start here: how to sell a house by owner in Utah</a>
+    <a href="diy-cma.html">Price it: run your own CMA</a>
+    <a href="seller-net-sheet.html">Net sheet: what you walk away with</a>
+    <a href="listing-prep.html">Prep it: room by room</a>
+    <a href="paint-guide.html">Paint colors that sell</a>
+    <a href="market-your-home.html">Market it: getting your listing seen</a>
+    <a href="repc-walkthrough.html">The REPC, explained</a>
+    <a href="disclosures.html">Utah disclosure requirements</a>
+    <a href="settlement-day.html">Closing day, start to finish</a>
   </div>
 </nav>
+
 <footer>
-    <div class="footer-brand">Kelsie Jimenez</div>
-    <div class="footer-meta">The Perry Group &middot; Real Broker LLC &middot; License #11407496-SA00<br><a href="tel:8014202284">(801) 420-2284</a> &middot; <a href="https://kelsiejimenez.com">kelsiejimenez.com</a> &middot; <a href="mailto:kelsie.jimenez@theperry.group">kelsie.jimenez@theperry.group</a><br>Pleasant Grove, Utah</div>
-  </footer>
+  <div class="wrap">
+    <div>
+      <div class="fname">Kelsie Jimenez<span>The Perry Group &middot; Real Broker LLC</span></div>
+      <p class="contact"><a href="tel:8014202284">(801) 420-2284</a><br><a href="https://kelsiejimenez.com">kelsiejimenez.com</a></p>
+    </div>
+    <div>
+      <p class="disclaimer">License #11407496-SA00. This guide is educational and is not legal advice. Reading it does not create an agency or client relationship.</p>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>

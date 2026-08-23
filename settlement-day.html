@@ -22,149 +22,34 @@
 <meta property="og:url" content="https://forsalebyowner.kelsiejimenez.com/settlement-day.html">
 <meta property="og:type" content="website">
 <meta name="description" content="What happens on settlement day for a Utah home seller. Who is in the room, what you sign, when the money lands, and what to bring with you.">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="guide.css">
 <style>
-  :root {
-    --dark:#22302A;--green:#2B3D30;--green-mid:#3E5547;
-    --sage:#A8A493;--mist:#C9C2AE;--taupe:#B5A88E;
-    --cream:#F8F5EE;--warm:#F6F3EA;--linen:#EFEAE0;
-    --mid:#5C564A;--light:#8A8474;--white:#ffffff;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{background:var(--cream);font-family:'Lato',sans-serif;color:var(--dark);line-height:1.7}
-
-  /* TOP BAR */
-  .top-bar{background:var(--dark);padding:13px 48px;display:flex;justify-content:space-between;align-items:center}
-  .top-bar-name{font-family:'Lato',sans-serif;font-size:13px;color:var(--linen);font-weight:400;letter-spacing:1px}
-  .top-bar-contact{font-size:11px;color:rgba(255,255,255,.4);letter-spacing:1.5px}
-
-  /* HERO */
-  .hero { position:relative; min-height:74vh; display:flex; align-items:center; justify-content:center; text-align:center;
-    padding:140px 24px 86px; background:url('hero.jpg') center 42%/cover no-repeat, var(--green); overflow:hidden; }
-  .hero::before { content:''; position:absolute; inset:0;
-    background:linear-gradient(180deg, rgba(15,20,16,0.52) 0%, rgba(15,20,16,0.44) 60%, rgba(15,20,16,0.40) 100%); }
-  .hero > * { position:relative; z-index:1; }
-  .kicker { font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:rgba(242,232,213,0.85); margin-bottom:14px; }
-  .hero h1{font-family:'Playfair Display',serif;font-size:clamp(40px,5.5vw,66px);font-weight:400;color:var(--cream);line-height:1.07;text-shadow:0 2px 18px rgba(0,0,0,0.45)}
-  .hero h1 em{font-style:italic;color:var(--cream)}
-  .hero-bar { position:absolute; left:0; right:0; bottom:0; z-index:2; background:rgba(18,24,19,0.45);
-    backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-top:1px solid rgba(242,232,213,0.16); padding:14px 22px; }
-  .hero-bar p { max-width:760px; margin:0 auto; text-align:center; font-size:13.5px; font-weight:300; color:rgba(242,232,213,0.95); line-height:1.65; }
-
-  /* INTRO LETTER */
-  .intro-letter{background:var(--warm);border-left:4px solid var(--sage);padding:32px 48px}
-  .letter-quote{font-family:'Playfair Display',serif;font-size:17px;font-style:italic;color:var(--dark);line-height:1.75;margin-bottom:14px}
-  .letter-sig{font-size:12px;color:var(--light);letter-spacing:1px}
-
-  /* MAIN */
-  .main{max-width:860px;margin:0 auto;padding:64px 48px 80px}
-  .section{margin-bottom:64px}
-  .section-eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--sage);font-weight:600;margin-bottom:12px}
-  .section-title{font-family:'Playfair Display',serif;font-size:32px;font-weight:400;color:var(--dark);line-height:1.15;margin-bottom:16px}
-  .section-title em{font-style:italic;color:var(--taupe)}
-  .section-body{font-size:15px;color:var(--mid);font-weight:300;line-height:1.85;margin-bottom:24px}
-  .section-body strong{color:var(--dark);font-weight:500}
-  .divider{width:48px;height:1px;background:var(--linen);margin:28px 0}
-
-  /* STEPS */
-  .steps{display:flex;flex-direction:column;gap:0;margin:24px 0;border:1px solid var(--linen);background:var(--white)}
-  .step{display:flex;align-items:flex-start;gap:20px;padding:24px 28px;border-bottom:1px solid var(--linen);transition:background .2s}
-  .step:last-child{border-bottom:none}
-  .step:hover{background:var(--cream)}
-  .step-num{width:32px;height:32px;border-radius:50%;background:var(--green);color:white;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0;margin-top:2px}
-  .step-num.final{background:var(--sage)}
-  .step-body{flex:1}
-  .step-body strong{display:block;font-size:14px;color:var(--dark);font-weight:500;margin-bottom:4px}
-  .step-body p{font-size:13px;color:var(--mid);font-weight:300;line-height:1.6}
-  .step-final-badge{display:inline-block;background:rgba(153,161,137,.15);color:var(--sage);font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:3px 10px;border-radius:2px;font-weight:600;margin-top:6px}
-
-  /* ALERTS */
-  .alert{padding:20px 24px;margin:20px 0;font-size:14px;line-height:1.75;font-weight:300}
-  .alert-warm{background:var(--warm);border-left:3px solid var(--taupe);color:var(--mid)}
-  .alert-sage{background:rgba(153,161,137,.1);border-left:3px solid var(--sage);color:var(--mid)}
-  .alert-important{background:var(--linen);border-left:3px solid var(--green);color:var(--mid)}
-  .alert strong{color:var(--dark);font-weight:500}
-
-  /* TIMING CARDS */
-  .timing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}
-  .timing-card{background:var(--white);border:1px solid var(--linen);padding:24px 20px;text-align:center;transition:border-color .2s}
-  .timing-card:hover{border-color:var(--mist)}
-  .timing-icon{font-size:26px;margin-bottom:12px}
-  .timing-title{font-family:'Playfair Display',serif;font-size:14px;color:var(--dark);margin-bottom:8px;font-weight:500}
-  .timing-body{font-size:12px;color:var(--light);line-height:1.7;font-weight:300}
-
-  /* POSSESSION BOX */
-  .possession-box{background:var(--white);border:1px solid var(--linen);padding:28px 32px;margin:20px 0}
-  .possession-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--taupe);font-weight:600;margin-bottom:14px}
-  .possession-text{font-size:15px;color:var(--dark);font-weight:300;line-height:1.75}
-  .possession-text strong{font-weight:500}
-
-  /* BEFORE YOU GO */
-  .prep-list{display:flex;flex-direction:column;gap:12px;margin:20px 0}
-  .prep-item{display:flex;align-items:flex-start;gap:14px;padding:16px 20px;background:var(--white);border:1px solid var(--linen);transition:border-color .2s}
-  .prep-item:hover{border-color:var(--mist)}
-  .prep-dot{width:8px;height:8px;border-radius:50%;background:var(--sage);flex-shrink:0;margin-top:5px}
-  .prep-text{font-size:14px;color:var(--dark);font-weight:300;line-height:1.5}
-  .prep-text strong{font-weight:500;color:var(--dark)}
-  .prep-note{font-size:11px;color:var(--light);margin-top:3px}
-
-  /* KELSIE NOTE */
-  .kelsie-note{background:var(--green);padding:44px 48px;margin:48px 0;position:relative;overflow:hidden}
-  .kelsie-note::before{content:'\201C';font-family:'Playfair Display',serif;font-size:140px;color:rgba(255,255,255,.04);position:absolute;top:-16px;left:24px;line-height:1;pointer-events:none}
-  .kelsie-note-text{font-family:'Playfair Display',serif;font-size:18px;font-style:italic;color:var(--cream);line-height:1.8;margin-bottom:22px;position:relative}
-  .kelsie-note-sig{font-size:11px;color:var(--mist);letter-spacing:2px;text-transform:uppercase}
-
-  /* CHECKLIST */
-  .checklist-wrap{background:var(--dark);padding:44px 48px;margin-top:48px}
-  .checklist-heading{font-family:'Playfair Display',serif;font-size:28px;color:var(--cream);margin-bottom:6px;font-weight:400}
-  .checklist-sub{font-size:13px;color:rgba(255,255,255,.35);margin-bottom:28px;font-weight:300}
-  .progress-wrap{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:14px 20px;display:flex;align-items:center;gap:16px;margin-bottom:32px}
-  .progress-label{font-size:10px;color:rgba(255,255,255,.3);letter-spacing:2px;text-transform:uppercase;white-space:nowrap}
-  .progress-bar{flex:1;height:3px;background:rgba(255,255,255,.08);overflow:hidden}
-  .progress-fill{height:100%;background:var(--sage);transition:width .4s ease;width:0%}
-  .progress-pct{font-size:12px;color:var(--sage);font-weight:500;white-space:nowrap}
-  .checklist-group{margin-bottom:28px}
-  .checklist-group-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--mist);font-weight:600;margin-bottom:12px}
-  .check-item{display:flex;align-items:flex-start;gap:14px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.05);cursor:pointer}
-  .check-item:last-child{border-bottom:none}
-  .check-box{width:20px;height:20px;border:1.5px solid rgba(255,255,255,.2);flex-shrink:0;margin-top:2px;display:flex;align-items:center;justify-content:center;transition:all .2s;font-size:11px;color:transparent;background:transparent}
-  .check-item.done .check-box{background:var(--sage);border-color:var(--sage);color:white}
-  .check-item.done .check-text{color:rgba(255,255,255,.25);text-decoration:line-through}
-  .check-text{font-size:14px;color:rgba(255,255,255,.8);font-weight:300;line-height:1.5;transition:all .2s}
-  .check-note{font-size:11px;color:rgba(255,255,255,.25);margin-top:3px}
-
-  /* FOOTER */
-  footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding:32px 48px;display:flex;justify-content:space-between;align-items:center}
-  .footer-brand{font-family:'Lato',sans-serif;font-size:16px;color:var(--linen);font-weight:400;letter-spacing:2px}
-  .footer-right{text-align:right;font-size:11px;color:rgba(255,255,255,.3);letter-spacing:1px;line-height:1.9}
-
-  @media(max-width:680px){
-    .top-bar,.intro-letter,.main,footer{padding-left:24px;padding-right:24px}
-    .hero{padding-left:24px;padding-right:24px}
-    .timing-grid{grid-template-columns:1fr}
-    footer{flex-direction:column;gap:14px;text-align:center}
-    .footer-right{text-align:center}
-    .kelsie-note,.checklist-wrap{padding:32px 24px}
-  }
-    h1 em, h2 em, h3 em { font-style: italic; }
-  
-    /* ─── BRAND PASS OVERRIDES ─── */
-    .section-icon { display: none !important; }
-    body { font-family: 'Lato', sans-serif; }
-    h1, h2, h3 { font-family: 'Playfair Display', serif; }
-
-    .top-bar { display: none !important; }
-
-  /* italic-accent-fix: 2026-07-03 */
-  /* Italic display accents use Times New Roman. Playfair Display italic capitals (Q, J, Z) render poorly. */
-  h1 em, h2 em, h3 em, h4 em, h5 em, h6 em,
-  .section-title em, .nextband h2 em, .w-hero h2 em, .offramp h2,
-  .pull, .letter-quote, .kelsie-note-text, .opt__no {
-    font-family: 'Times New Roman', Georgia, serif;
-    font-style: italic;
-  }
-  </style>
+  /* Page-specific: closing-day checklist + progress indicator */
+  .progress-wrap{display:flex;align-items:center;gap:16px;margin:22px 0 32px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;}
+  .progress-label{font-family:var(--util);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--ink-soft);font-weight:700;white-space:nowrap;}
+  .progress-bar{flex:1;height:3px;background:var(--line);overflow:hidden;}
+  .progress-fill{height:100%;width:0%;background:var(--sage);transition:width .4s ease;}
+  .progress-pct{font-family:var(--util);font-size:.82rem;font-weight:700;color:var(--forest);white-space:nowrap;}
+  .checklist-group{margin-bottom:30px;}
+  .checklist-group-label{font-family:var(--util);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--ink-soft);font-weight:700;margin-bottom:10px;}
+  .check-item{display:flex;align-items:flex-start;gap:14px;padding:12px 0;
+    border-bottom:1px solid var(--line);cursor:pointer;font-family:var(--util);}
+  .check-item:last-child{border-bottom:none;}
+  .check-box{width:18px;height:18px;border:1.5px solid var(--sage);background:#fff;flex-shrink:0;
+    margin-top:3px;display:flex;align-items:center;justify-content:center;font-size:11px;
+    color:transparent;transition:background .18s ease,border-color .18s ease;}
+  .check-item.done .check-box{background:var(--sage);border-color:var(--sage);}
+  .check-item.done .check-box::after{content:'\2713';color:#fff;}
+  .check-item.done .check-text{color:var(--ink-soft);text-decoration:line-through;}
+  .check-text{font-size:.98rem;line-height:1.5;color:var(--ink);}
+  .check-note{font-size:.84rem;line-height:1.45;color:var(--ink-soft);margin-top:3px;text-decoration:none;}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -208,186 +93,171 @@
 </script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<div style="position:fixed; top:16px; left:16px; right:16px; z-index:100;">
-  <nav style="max-width:1100px; margin:0 auto; background:rgba(43,61,48,0.72); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border:1px solid rgba(242,232,213,0.18); box-shadow:0 4px 32px rgba(0,0,0,0.18); border-radius:100px; padding:10px 12px 10px 24px; display:flex; align-items:center; justify-content:space-between;">
-    <a href="index.html" style="font-size:13px; color:#F2E8D5; text-decoration:none; font-family:'Lato',sans-serif;">&larr; Back to the Guide</a>
-    <a href="sms:8014202284" style="background:linear-gradient(135deg, rgba(43,61,48,0.82), rgba(43,61,48,0.62)); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border:1px solid rgba(242,232,213,0.45); box-shadow:inset 0 1px 0 rgba(255,255,255,0.25); color:#F2E8D5; padding:9px 20px; border-radius:100px; font-size:13px; font-weight:500; text-decoration:none; white-space:nowrap; font-family:'Lato',sans-serif;">Work With Me</a>
-  </nav>
-</div>
+<header class="topbar"><div class="wrap"><a class="brand" href="/">Kelsie Jimenez<span class="brand-sub">For Sale By Owner</span></a>
+<nav><a href="diy-cma.html">Pricing</a><a href="repc-walkthrough.html">Contract</a><a href="sms:8014202284">Text Kelsie</a></nav></div></header>
 
-
-<!-- TOP BAR -->
-<div class="top-bar">
-  <div class="top-bar-name">Kelsie Jimenez · The Perry Group · Real Broker LLC</div>
-  <div class="top-bar-contact">801.420.2284 · kelsie.utah@gmail.com</div>
-</div>
-
-<!-- HERO -->
-<div class="hero">
-  <div>
-    <p class="kicker">For Sale By Owner &middot; Seller Guide</p>
-    <h1>The Closing, <br><em>start to finish</em></h1>
+<section class="hero-slim">
+  <img class="hero-img" src="hero.jpg" alt="A Utah County home at golden hour" />
+  <div class="hero-scrim"></div>
+  <div class="hero-inner">
+    <span class="hero-eyebrow">For Sale By Owner &middot; Seller Guide</span>
+    <h1 class="hero-title">The Closing, <em>start to finish</em></h1>
   </div>
-  <div class="hero-bar"><p>You carried this the whole way. Here is exactly what closing day looks like from the seller's side, what happens after you sign, and the moment you actually get paid and hand over the keys.</p></div>
-</div>
+</section>
 
-<!-- INTRO LETTER -->
-<div class="intro-letter">
-  <div class="letter-quote">"Closing is the part everyone waits for, and it can still feel a little mysterious when you are doing this yourself. So here is the whole thing in plain terms: what you sign, what happens behind the scenes, and the moment it is truly done. You have got this."</div>
-  <div class="letter-sig">Kelsie Jimenez</div>
-</div>
+<section>
+  <div class="wrap read">
+    <p class="lede">You carried this the whole way. Here is exactly what closing day looks like from the seller's side, what happens after you sign, and the moment you actually get paid and hand over the keys.</p>
+  </div>
+</section>
 
-<!-- MAIN -->
-<div class="main">
+<main id="main">
 
-  <!-- SIGNING DAY -->
-  <div class="section">
-    <div class="section-eyebrow">What to Know First</div>
-    <div class="section-title">Signing Day<br><em>(Closing)</em></div>
-    <div class="section-body">When you sit down to sign, you will complete the deed and all of your closing documents. It is a big moment. But it helps to know what happens next, because signing is not quite the finish line.</div>
+<section class="band-warm">
+  <div class="wrap read">
+    <p class="pull">"Closing is the part everyone waits for, and it can still feel a little mysterious when you are doing this yourself. So here is the whole thing in plain terms: what you sign, what happens behind the scenes, and the moment it is truly done. You have got this."</p>
+    <p class="pull-sig">Kelsie Jimenez</p>
+  </div>
+</section>
 
-    <div class="alert alert-important">
-      <strong>Important:</strong> Signing does not mean the sale is final yet. It is a major step, but a few things still happen behind the scenes before ownership officially transfers and you get paid.
+<!-- SIGNING DAY -->
+<section>
+  <div class="wrap read">
+    <span class="label">What to Know First</span>
+    <h2>Signing Day <em>(Closing)</em></h2>
+    <p class="lede">When you sit down to sign, you will complete the deed and all of your closing documents. It is a big moment. But it helps to know what happens next, because signing is not quite the finish line.</p>
+
+    <div class="panel">
+      <p class="fine"><strong>Important:</strong> Signing does not mean the sale is final yet. It is a major step, but a few things still happen behind the scenes before ownership officially transfers and you get paid.</p>
     </div>
   </div>
+</section>
 
-  <!-- WHAT HAPPENS AFTER -->
-  <div class="section">
-    <div class="section-eyebrow">Behind the Scenes</div>
-    <div class="section-title">What Happens<br><em>After You Sign</em></div>
-    <div class="section-body">Once you have signed, a short sequence plays out in the background. Here is what is happening while you wait:</div>
+<!-- WHAT HAPPENS AFTER -->
+<section>
+  <div class="wrap read">
+    <span class="label">Behind the Scenes</span>
+    <h2>What Happens <em>After You Sign</em></h2>
+    <p class="lede">Once you have signed, a short sequence plays out in the background. Here is what is happening while you wait:</p>
 
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <strong>The buyer's funds reach the title company</strong>
-          <p>The buyer's lender wires the loan proceeds, or the buyer sends their funds if paying cash, to fund the purchase.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <strong>The title company balances the transaction</strong>
-          <p>Every debit and credit is reconciled so each dollar is accounted for, including your loan payoff and your net proceeds.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <strong>The full package goes to the county recorder</strong>
-          <p>The deed and all required documents are submitted to the county for official recording.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num final">4</div>
-        <div class="step-body">
-          <strong>The deed is officially recorded</strong>
-          <p>This is the moment ownership transfers to the buyer. The sale is now final.</p>
-          <span class="step-final-badge">This is when you get paid and hand over keys</span>
-        </div>
+    <div class="step">
+      <div class="step-num">01</div>
+      <h3>The buyer's funds reach the title company</h3>
+      <p>The buyer's lender wires the loan proceeds, or the buyer sends their funds if paying cash, to fund the purchase.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-num">02</div>
+      <h3>The title company balances the transaction</h3>
+      <p>Every debit and credit is reconciled so each dollar is accounted for, including your loan payoff and your net proceeds.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-num">03</div>
+      <h3>The full package goes to the county recorder</h3>
+      <p>The deed and all required documents are submitted to the county for official recording.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-num">04</div>
+      <h3>The deed is officially recorded</h3>
+      <p>This is the moment ownership transfers to the buyer. The sale is now final.</p>
+      <div class="panel">
+        <p class="fine">This is when you get paid and hand over keys</p>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- POSSESSION & KEYS -->
-  <div class="section">
-    <div class="section-eyebrow">Possession</div>
-    <div class="section-title">Keys &amp;<br><em>Possession</em></div>
-    <div class="section-body">Possession follows the terms in your contract. Here is what that means for you as the seller:</div>
+<!-- POSSESSION & KEYS -->
+<section>
+  <div class="wrap read">
+    <span class="label">Possession</span>
+    <h2>Keys &amp; <em>Possession</em></h2>
+    <p class="lede">Possession follows the terms in your contract. Here is what that means for you as the seller:</p>
 
-    <div class="possession-box">
-      <div class="possession-label">If Your Contract States "Possession Upon Recording"</div>
-      <div class="possession-text">You release the keys <strong>only after the deed has been recorded</strong>, not the moment you finish signing. Recording is the official transfer of ownership, and that is the trigger to hand over keys. Plan to be fully moved out before then.</div>
+    <div class="panel">
+      <h4>If Your Contract States "Possession Upon Recording"</h4>
+      <p class="fine">You release the keys <strong>only after the deed has been recorded</strong>, not the moment you finish signing. Recording is the official transfer of ownership, and that is the trigger to hand over keys. Plan to be fully moved out before then.</p>
     </div>
 
-    <div class="alert alert-sage">
-      <strong>The title company will confirm the moment recording is done.</strong> That is your green light to release keys, and it is also when your proceeds are released to you.
-    </div>
-  </div>
-
-  <!-- TIMING -->
-  <div class="section">
-    <div class="section-eyebrow">What to Expect</div>
-    <div class="section-title">Timing &amp;<br><em>Patience</em></div>
-    <div class="section-body">Recording timelines in Utah County depend largely on when signing happens. Here is a rough guide, and remember this is also when your proceeds get disbursed:</div>
-
-    <div class="timing-grid">
-      <div class="timing-card">
-        <div class="timing-title">Morning Signing</div>
-        <div class="timing-body">Earlier signings have the best chance of recording the same day. Not guaranteed, but very possible.</div>
-      </div>
-      <div class="timing-card">
-        <div class="timing-title">Afternoon Signing</div>
-        <div class="timing-body">If signing happens later in the day, recording will typically not happen until the following business day.</div>
-      </div>
-      <div class="timing-card">
-        <div class="timing-title">Friday Signing</div>
-        <div class="timing-body">If you sign Friday afternoon and it does not record the same day, recording will happen Monday morning.</div>
-      </div>
-    </div>
-
-    <div class="alert alert-warm">
-      The county records documents in the order they arrive, and there is no way to rush it (as much as we all wish there was). <strong>This last stretch takes a little patience, but you are right at the end.</strong>
+    <div class="panel">
+      <p class="fine"><strong>The title company will confirm the moment recording is done.</strong> That is your green light to release keys, and it is also when your proceeds are released to you.</p>
     </div>
   </div>
+</section>
 
-  <!-- BEFORE YOU GO -->
-  <div class="section">
-    <div class="section-eyebrow">Be Prepared</div>
-    <div class="section-title">Before You Head<br><em>to Closing</em></div>
-    <div class="section-body">A few things to have ready before your signing appointment so closing day goes smoothly:</div>
+<!-- TIMING -->
+<section>
+  <div class="wrap read">
+    <span class="label">What to Expect</span>
+    <h2>Timing &amp; <em>Patience</em></h2>
+    <p class="lede">Recording timelines in Utah County depend largely on when signing happens. Here is a rough guide, and remember this is also when your proceeds get disbursed:</p>
 
-    <div class="prep-list">
-      <div class="prep-item">
-        <div class="prep-dot"></div>
-        <div>
-          <div class="prep-text"><strong>Bring a valid government-issued photo ID</strong></div>
-          <div class="prep-note">Driver's license or passport, required to sign the deed and closing documents</div>
-        </div>
-      </div>
-      <div class="prep-item">
-        <div class="prep-dot"></div>
-        <div>
-          <div class="prep-text"><strong>Confirm your net proceeds and how you will be paid</strong></div>
-          <div class="prep-note">Ask the title company: wire or check. If wired, verify the account details by phone, never from email alone</div>
-        </div>
-      </div>
-      <div class="prep-item">
-        <div class="prep-dot"></div>
-        <div>
-          <div class="prep-text"><strong>Have the home fully vacated and cleaned for the buyer's walkthrough</strong></div>
-          <div class="prep-note">The buyer walks the home before closing. Empty, clean, and as agreed is what keeps the deal smooth</div>
-        </div>
-      </div>
-      <div class="prep-item">
-        <div class="prep-dot"></div>
-        <div>
-          <div class="prep-text"><strong>Time your utility cancellation to the possession date</strong></div>
-          <div class="prep-note">Cancel or transfer power, water, and gas for the day you hand over keys, not before, so the home stays functional for the walkthrough</div>
-        </div>
-      </div>
-      <div class="prep-item">
-        <div class="prep-dot"></div>
-        <div>
-          <div class="prep-text"><strong>Gather everything the buyer will need at handoff</strong></div>
-          <div class="prep-note">All keys, garage remotes, mailbox keys, gate and alarm codes, plus any manuals and warranties</div>
-        </div>
-      </div>
+    <div class="step">
+      <div class="step-num">Best case</div>
+      <h3>Morning Signing</h3>
+      <p>Earlier signings have the best chance of recording the same day. Not guaranteed, but very possible.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-num">Next day</div>
+      <h3>Afternoon Signing</h3>
+      <p>If signing happens later in the day, recording will typically not happen until the following business day.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-num">Over the weekend</div>
+      <h3>Friday Signing</h3>
+      <p>If you sign Friday afternoon and it does not record the same day, recording will happen Monday morning.</p>
+    </div>
+
+    <div class="panel">
+      <p class="fine">The county records documents in the order they arrive, and there is no way to rush it (as much as we all wish there was). <strong>This last stretch takes a little patience, but you are right at the end.</strong></p>
     </div>
   </div>
+</section>
 
-  <!-- KELSIE NOTE -->
-  <div class="kelsie-note">
-    <div class="kelsie-note-text">"You carried this the whole way yourself, and that is genuinely no small thing. If any part of this last stretch gets confusing, I am one text away, no strings. Congratulations. You earned this one."</div>
-    <div class="kelsie-note-sig">Kelsie Jimenez &nbsp;&middot;&nbsp; 801.420.2284</div>
+<!-- BEFORE YOU GO -->
+<section>
+  <div class="wrap read">
+    <span class="label">Be Prepared</span>
+    <h2>Before You Head <em>to Closing</em></h2>
+    <p class="lede">A few things to have ready before your signing appointment so closing day goes smoothly:</p>
+
+    <h4>Bring a valid government-issued photo ID</h4>
+    <p>Driver's license or passport, required to sign the deed and closing documents</p>
+
+    <h4>Confirm your net proceeds and how you will be paid</h4>
+    <p>Ask the title company: wire or check. If wired, verify the account details by phone, never from email alone</p>
+
+    <h4>Have the home fully vacated and cleaned for the buyer's walkthrough</h4>
+    <p>The buyer walks the home before closing. Empty, clean, and as agreed is what keeps the deal smooth</p>
+
+    <h4>Time your utility cancellation to the possession date</h4>
+    <p>Cancel or transfer power, water, and gas for the day you hand over keys, not before, so the home stays functional for the walkthrough</p>
+
+    <h4>Gather everything the buyer will need at handoff</h4>
+    <p>All keys, garage remotes, mailbox keys, gate and alarm codes, plus any manuals and warranties</p>
   </div>
+</section>
 
-  <!-- CHECKLIST -->
-  <div class="checklist-wrap">
-    <div class="checklist-heading">Your Closing Day Checklist</div>
-    <div class="checklist-sub">Check off as you go. Your progress saves on this device.</div>
+<!-- KELSIE NOTE -->
+<section class="band-warm">
+  <div class="wrap read">
+    <p class="pull">"You carried this the whole way yourself, and that is genuinely no small thing. If any part of this last stretch gets confusing, I am one text away, no strings. Congratulations. You earned this one."</p>
+    <p class="pull-sig">Kelsie Jimenez &nbsp;&middot;&nbsp; 801.420.2284</p>
+  </div>
+</section>
+
+<!-- CHECKLIST -->
+<section>
+  <div class="wrap read">
+    <span class="label">Work through it</span>
+    <h2>Your Closing Day Checklist</h2>
+    <p>Check off as you go. Your progress saves on this device.</p>
 
     <div class="progress-wrap">
       <div class="progress-label">Progress</div>
@@ -457,32 +327,9 @@
       </div>
     </div>
   </div>
+</section>
 
-</div>
-
-<!-- FOOTER -->
-
-<!-- GUIDE CROSS-LINKS -->
-<nav class="guide-nav" aria-label="More in this guide" style="background:#F6F3EA; border-top:1px solid #E3DCCB; padding:44px 24px;">
-  <div style="max-width:660px; margin:0 auto;">
-    <h2 style="font-family:'Playfair Display',serif; font-weight:400; font-size:22px; color:#2B3D30; margin:0 0 14px;">More in the Utah FSBO guide</h2>
-    <ul style="list-style:none; margin:0; padding:0;">
-      <li style="padding:7px 0; border-top:1px solid #E3DCCB;"><a href="index.html" style="color:#2B3D30; text-decoration:none; font-family:'Times New Roman',Times,serif; font-size:15px;">Start here: how to sell a house by owner in Utah</a></li>
-      <li style="padding:7px 0; border-top:1px solid #E3DCCB;"><a href="diy-cma.html" style="color:#2B3D30; text-decoration:none; font-family:'Times New Roman',Times,serif; font-size:15px;">Price it: run your own CMA</a></li>
-      <li style="padding:7px 0; border-top:1px solid #E3DCCB;"><a href="seller-net-sheet.html" style="color:#2B3D30; text-decoration:none; font-family:'Times New Roman',Times,serif; font-size:15px;">Net sheet: what you walk away with</a></li>
-      <li style="padding:7px 0; border-top:1px solid #E3DCCB;"><a href="listing-prep.html" style="color:#2B3D30; text-decoration:none; font-family:'Times New Roman',Times,serif; font-size:15px;">Prep it: room by room</a></li>
-      <li style="padding:7px 0; border-top:1px solid #E3DCCB;"><a href="paint-guide.html" style="color:#2B3D30; text-decoration:none; font-family:'Times New Roman',Times,serif; font-size:15px;">Paint colors that sell</a></li>
-      <li style="padding:7px 0; border-top:1px solid #E3DCCB;"><a href="market-your-home.html" style="color:#2B3D30; text-decoration:none; font-family:'Times New Roman',Times,serif; font-size:15px;">Market it: getting your listing seen</a></li>
-      <li style="padding:7px 0; border-top:1px solid #E3DCCB;"><a href="repc-walkthrough.html" style="color:#2B3D30; text-decoration:none; font-family:'Times New Roman',Times,serif; font-size:15px;">The REPC, explained</a></li>
-      <li style="padding:7px 0; border-top:1px solid #E3DCCB;"><a href="disclosures.html" style="color:#2B3D30; text-decoration:none; font-family:'Times New Roman',Times,serif; font-size:15px;">Utah disclosure requirements</a></li>
-      <li style="padding:7px 0; border-top:1px solid #E3DCCB;"><a href="seller-advantage.html" style="color:#2B3D30; text-decoration:none; font-family:'Times New Roman',Times,serif; font-size:15px;">If you want help partway through</a></li>
-    </ul>
-  </div>
-</nav>
-<footer>
-  <div class="footer-brand">Kelsie Jimenez</div>
-  <div class="footer-right">The Perry Group &middot; Real Broker LLC &middot; License #11407496-SA00<br>801.420.2284 &middot; kelsiejimenez.com</div>
-</footer>
+</main>
 
 <script>
 function toggleCheck(item){item.classList.toggle('done');updateProgress();saveState()}
@@ -507,10 +354,40 @@ function loadState(){
 loadState();
 </script>
 
-<div style="text-align:center; padding: 30px 20px 60px; background: transparent;">
-  <a href="sms:8014202284" style="display:inline-block; background:#2B3D30; color:#F2E8D5; font-family:'Lato',sans-serif; font-size:14px; font-weight:500; letter-spacing:0.04em; padding:15px 30px; border-radius:100px; text-decoration:none;">
-    <small style="display:block; font-size:10.5px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(242,232,213,0.65); margin-bottom:3px; font-weight:400;">Stuck on the closing steps?</small>Text me and I'll help you through it &rarr;
-  </a>
-</div>
+<section>
+  <div class="wrap read">
+    <span class="label">Stuck on the closing steps?</span>
+    <p><a class="ed-link" href="sms:8014202284">Text me and I'll help you through it &rarr;</a></p>
+  </div>
+</section>
+
+<!-- GUIDE CROSS-LINKS -->
+<nav class="guide-nav" aria-label="More in this guide">
+  <div class="wrap read">
+    <span class="label">More in the Utah FSBO guide</span>
+    <a href="index.html">Start here: how to sell a house by owner in Utah</a>
+    <a href="diy-cma.html">Price it: run your own CMA</a>
+    <a href="seller-net-sheet.html">Net sheet: what you walk away with</a>
+    <a href="listing-prep.html">Prep it: room by room</a>
+    <a href="paint-guide.html">Paint colors that sell</a>
+    <a href="market-your-home.html">Market it: getting your listing seen</a>
+    <a href="repc-walkthrough.html">The REPC, explained</a>
+    <a href="disclosures.html">Utah disclosure requirements</a>
+    <a href="seller-advantage.html">If you want help partway through</a>
+  </div>
+</nav>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="fname">Kelsie Jimenez<span>The Perry Group &middot; Real Broker LLC</span></div>
+      <p class="contact"><a href="tel:8014202284">(801) 420-2284</a><br><a href="https://kelsiejimenez.com">kelsiejimenez.com</a></p>
+    </div>
+    <div>
+      <p class="disclaimer">License #11407496-SA00. This guide is educational and is not legal advice. Reading it does not create an agency or client relationship.</p>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
