@@ -19,131 +19,74 @@
 <meta property="og:description" content="A step by step FSBO guide for Utah homeowners, from a listing agent who wants you to win. No gatekeeping, no pressure.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://forsalebyowner.kelsiejimenez.com/">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
-  :root {
-    --green:#2B3D30; --dark:#22302A; --green-mid:#3E5547; --bar:#1b2620;
-    --sage:#A8A493; --mist:#C9C2AE; --taupe:#B5A88E; --moss:#B7BEA9;
-    --cream:#F2E8D5; --warm:#F6F3EA; --linen:#EFEAE0;
-    --mid:#5C564A; --light:#8A8474; --white:#ffffff; --charcoal:#1C1C1C; --bg:#FDFCFA;
-  }
-  * { margin:0; padding:0; box-sizing:border-box; }
-  html { scroll-behavior:smooth; }
-  body { font-family:'Lato',sans-serif; background:var(--bg); color:var(--charcoal); line-height:1.7; }
-  h1,h2,h3 { font-family:'Playfair Display',serif; }
+:root{--bg:#FDFCFA;--bg-warm:#F8F5EE;--sand:#F2E8D5;--ink:#1C1C1C;--ink-soft:#6E6E68;--forest:#2B3D30;--forest-2:#344A39;--sage:#99A189;--line:#E8E6DF;--display:"Playfair Display",Georgia,serif;--body:"Times New Roman",Times,serif;--util:"Lato",system-ui,sans-serif;--maxw:1140px;--readw:62ch;}
+*{box-sizing:border-box;}html{scroll-behavior:smooth;scroll-padding-top:80px;}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.14rem;line-height:1.78;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 30px;}.read{max-width:var(--readw);}
+h1,h2,h3,h4{font-family:var(--display);font-weight:500;line-height:1.16;margin:0;}
+p{margin:0 0 1.15em;}a{color:var(--forest);text-underline-offset:3px;}
+.label{font-family:var(--util);text-transform:uppercase;letter-spacing:.18em;font-size:.7rem;font-weight:700;color:var(--ink-soft);margin:0 0 18px;display:block;}
+section{padding:64px 0;}.band-warm{background:var(--bg-warm);}
+h2{font-size:clamp(1.9rem,3.4vw,2.6rem);margin-bottom:14px;letter-spacing:.1px;}
+.lede{font-size:1.27rem;line-height:1.66;color:var(--ink);}
+h1 em,h2 em,h3 em,h4 em,.pull{font-family:'Times New Roman',Georgia,serif;font-style:italic;}
 
-  .nav-wrap { position:fixed; top:16px; left:16px; right:16px; z-index:100; }
-  .nav-pill { max-width:1100px; margin:0 auto; background:rgba(43,61,48,0.72); backdrop-filter:blur(12px);
-    -webkit-backdrop-filter:blur(12px); border:1px solid rgba(242,232,213,0.18); box-shadow:0 4px 32px rgba(0,0,0,0.18);
-    border-radius:100px; padding:10px 12px 10px 24px; display:flex; align-items:center; justify-content:space-between; }
-  .nav-back { font-size:13px; color:var(--cream); text-decoration:none; }
-  .nav-cta { background:linear-gradient(135deg, rgba(43,61,48,0.82), rgba(43,61,48,0.62)); border:1px solid rgba(242,232,213,0.45);
-    box-shadow:inset 0 1px 0 rgba(255,255,255,0.25); color:var(--cream); padding:9px 20px; border-radius:100px;
-    font-size:13px; font-weight:500; text-decoration:none; white-space:nowrap; }
+.topbar{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:20;}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px;}
+.topbar .brand{font-family:var(--display);font-size:1.02rem;font-weight:500;color:var(--ink);text-decoration:none;}
+.topbar .brand-sub{display:block;font-family:var(--util);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-top:2px;font-weight:700;}
+.topbar nav a{margin-left:22px;font-family:var(--util);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--ink-soft);text-decoration:none;}
+.topbar nav a:hover{color:var(--forest);}
+@media (max-width:640px){.topbar nav a{margin-left:14px;font-size:.7rem;letter-spacing:.1em;}}
 
-  .hero { position:relative; min-height:74vh; display:flex; align-items:center; justify-content:center; text-align:center;
-    padding:140px 24px 86px; background:url('hero.jpg') center 42%/cover no-repeat, var(--green); }
-  .hero::before { content:''; position:absolute; inset:0;
-    background:linear-gradient(180deg, rgba(18,22,18,.50) 0%, rgba(18,22,18,.26) 38%, rgba(18,22,18,.18) 62%, rgba(18,22,18,.30) 100%); }
-  .hero > * { position:relative; z-index:1; }
-  .hero .kicker { font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:rgba(242,232,213,0.85); margin-bottom:14px; }
-  .hero h1 { font-weight:400; font-size:clamp(38px,6vw,64px); line-height:1.1; color:var(--cream); text-shadow:0 2px 18px rgba(0,0,0,0.45); }
-  .hero-bar { position:absolute; left:0; right:0; bottom:0; z-index:2; background:var(--bar); padding:22px 24px; }
-  .hero-bar p { max-width:760px; margin:0 auto; text-align:center; font-family:'Times New Roman',Times,serif; font-size:16px; color:var(--cream); line-height:1.5; }
+.hero-slim{position:relative;min-height:44vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:var(--forest-2);}
+.hero-slim .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%;display:block;}
+.hero-slim .hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,22,18,.12) 0%,rgba(18,22,18,.04) 45%,rgba(18,22,18,.38) 72%,rgba(18,22,18,.72) 100%);}
+.hero-slim .hero-inner{position:relative;z-index:2;padding:60px 30px 44px;max-width:var(--maxw);margin:0 auto;color:#fff;width:100%;}
+.hero-slim .hero-eyebrow{font-family:var(--util);font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;opacity:.9;font-weight:700;margin-bottom:14px;display:block;color:#fff;}
+.hero-slim .hero-title{font-family:var(--display);font-weight:500;font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.1;margin:0;color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.5);max-width:22ch;}
 
-  /* CONTENTS */
-  .contents { background:var(--bg); border-bottom:1px solid #E8E6DF; padding:30px 24px 32px; }
-  .contents .promise { font-family:'Lato',sans-serif; font-weight:400; font-size:10px; letter-spacing:0.18em;
-    text-transform:uppercase; color:var(--light); text-align:center; margin:0 0 22px; }
-  .contents .clist { max-width:820px; margin:0 auto; display:flex; flex-wrap:wrap; justify-content:center; }
-  .contents .clist a { font-family:'Lato',sans-serif; font-weight:400; font-size:11.5px; letter-spacing:0.18em;
-    text-transform:uppercase; color:var(--green); text-decoration:none; padding:6px 22px; border-left:1px solid #E8E6DF; }
-  .contents .clist a:first-child { border-left:none; }
-  .contents .clist a:hover { color:var(--sage); }
-  @media (max-width:640px) {
-    .contents { padding:24px 24px 8px; }
-    .contents .clist { display:block; max-width:340px; }
-    .contents .clist a { display:block; padding:15px 0; border-left:none; border-top:1px solid #E8E6DF; text-align:center; }
-    .contents .clist a:first-child { border-top:none; }
-  }
+.pull{font-family:'Times New Roman',Georgia,serif;font-style:italic;font-weight:400;font-size:clamp(1.55rem,3vw,2.2rem);line-height:1.32;color:var(--forest);max-width:26ch;margin:22px 0;}
+.pull-sig{font-family:var(--util);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;}
+.panel{border-left:2px solid var(--sage);padding:6px 0 6px 30px;margin-top:16px;}
+.panel .fine{font-family:var(--util);font-size:.92rem;line-height:1.55;color:var(--ink-soft);margin:0;}
 
-  .intro-letter { background:transparent; border-top:1px solid #E8E6DF; border-bottom:1px solid #E8E6DF;
-    padding:40px 0 34px; max-width:760px; margin:0 auto; text-align:center; }
-  .letter-quote { font-family:'Playfair Display',serif; font-size:18px; font-style:italic; color:var(--dark); line-height:1.75; margin-bottom:14px; }
-  .letter-sig { font-size:12px; color:var(--light); letter-spacing:1px; }
+.step{padding-top:34px;padding-bottom:10px;border-top:1px solid var(--line);}
+.step .step-num{font-family:var(--util);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sage);font-weight:700;margin-bottom:6px;}
+.step h3{font-size:clamp(1.5rem,2.8vw,1.9rem);margin-bottom:14px;line-height:1.22;}
+.step p{font-size:1.05rem;line-height:1.68;}
 
-  .main { max-width:920px; margin:0 auto; padding:60px 48px 40px; }
-  .section { margin-bottom:56px; }
-  .section-eyebrow { font-size:10px; letter-spacing:4px; text-transform:uppercase; color:var(--sage); font-weight:600; margin-bottom:12px; text-align:center; }
-  .section-title { font-size:32px; font-weight:400; color:var(--dark); line-height:1.16; margin-bottom:16px; text-align:center; }
-  .section-title em { font-style:italic; color:var(--taupe); }
-  .section-body { font-family:'Times New Roman',Times,serif; font-size:15px; color:var(--mid); font-weight:300; line-height:1.85; margin:0 auto 18px; max-width:660px; text-align:center; }
-  .section-body strong { color:var(--dark); font-weight:500; }
+.ed-link{display:inline-block;font-family:var(--util);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--forest);text-decoration:none;border-bottom:1.5px solid var(--forest);padding:8px 0 6px;margin:10px 0 6px;transition:color .18s ease,border-color .18s ease;}
+.ed-link:hover,.ed-link:focus{color:var(--forest-2);border-color:var(--forest-2);}
 
-  /* JOURNEY CARDS */
-  .steps { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin:30px 0 8px; }
-  .step { background:#fff; border:1px solid #E3DCCB; border-top:3px solid var(--green); border-radius:12px; padding:26px; display:flex; flex-direction:column; }
-  .step .num { font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:var(--sage); font-weight:700; margin-bottom:8px; }
-  .step h3 { font-weight:500; font-size:21px; margin-bottom:8px; }
-  .step p { font-family:'Times New Roman',Times,serif; font-size:14px; font-weight:300; color:#555; line-height:1.7; margin-bottom:18px; }
-  .step a { margin-top:auto; align-self:flex-start; min-width:160px; text-align:center; background:var(--cream); color:var(--green);
-    font-size:13.5px; font-weight:700; padding:12px 22px; border-radius:100px; text-decoration:none; }
-  .step a:hover { background:#EBDFC4; }
-  .step .soon { margin-top:auto; align-self:flex-start; background:#F4F1E8; color:#8A8474; font-size:11px; letter-spacing:0.14em;
-    text-transform:uppercase; padding:8px 16px; border-radius:100px; }
+/* CONTENTS */
+.contents{border-bottom:1px solid var(--line);padding:34px 0 30px;}
+.contents .promise{font-family:var(--util);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;margin:0 0 20px;}
+.contents .clist{display:flex;flex-wrap:wrap;gap:0 34px;}
+.contents .clist a{font-family:var(--util);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--forest);text-decoration:none;border-bottom:1.5px solid var(--forest);padding:6px 0 5px;margin-bottom:10px;}
+.contents .clist a:hover{color:var(--forest-2);border-color:var(--forest-2);}
+@media (max-width:640px){.contents .clist{display:block;}.contents .clist a{display:block;width:auto;}}
 
-  .alert { font-family:'Times New Roman',Times,serif; padding:22px 26px; margin:24px auto; max-width:680px; font-size:14.5px; line-height:1.8; font-weight:300; }
-  .alert-sage { background:rgba(168,164,147,0.14); border-left:3px solid var(--sage); color:var(--mid); }
-  .alert strong { color:var(--dark); font-weight:600; }
+.contact{font-family:var(--util);font-size:1rem;line-height:1.9;margin-top:10px;}
+.contact a{color:var(--forest);text-decoration:none;}
+.contact a:hover{text-decoration:underline;}
 
-  /* OFF-RAMP BAND */
-  .offramp { background:var(--cream); border-top:1px solid #E4D5BC; padding:74px 48px; text-align:center; }
-  .offramp .eyebrow { font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:var(--green); font-weight:600; margin-bottom:16px; }
-  .offramp h2 { font-size:clamp(28px,3.6vw,42px); font-weight:400; font-style:italic; color:var(--green); line-height:1.18; margin-bottom:16px; font-family:'Playfair Display', serif; }
-  .offramp p { font-family:'Times New Roman',Times,serif; font-size:15px; color:#666; font-weight:300; line-height:1.8; max-width:600px; margin:0 auto 30px; }
-  .btn-green { display:inline-block; background:var(--green); color:var(--cream); font-size:14px; font-weight:500; letter-spacing:0.04em;
-    padding:15px 34px; border-radius:100px; text-decoration:none; }
+footer{background:var(--bg-warm);border-top:1px solid var(--line);padding:44px 0 40px;font-family:var(--util);font-size:.94rem;color:var(--ink-soft);margin-top:40px;}
+footer .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:36px;}
+@media (max-width:720px){footer .wrap{grid-template-columns:1fr;gap:24px;}}
+footer .fname{font-family:var(--body);color:var(--ink);font-size:1.1rem;}
+footer .fname span{font-family:var(--util);display:block;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-top:4px;}
+footer a{color:var(--forest);text-decoration:none;}footer a:hover{text-decoration:underline;}
+.disclaimer{font-size:.78rem;line-height:1.6;color:#8B8B84;}
+a.skip{position:absolute;left:-9999px;}
+a.skip:focus{left:16px;top:16px;position:fixed;background:var(--bg);color:var(--forest);padding:10px 16px;border-radius:4px;z-index:50;border:1px solid var(--line);}
+</style>
 
-  .kelsie-note { background:var(--green); padding:44px 48px; margin:0; position:relative; overflow:hidden; }
-  .kelsie-note .inner { max-width:760px; margin:0 auto; }
-  .kelsie-note-text { font-style:italic; font-size:18px; color:var(--cream); line-height:1.8; margin-bottom:22px; position:relative; font-family:'Playfair Display', serif; }
-  .kelsie-note-sig { font-size:11px; color:var(--mist); letter-spacing:2px; text-transform:uppercase; }
-
-  .cta-wrap { text-align:center; padding:48px 24px 56px; }
-  .cta-btn { display:inline-block; background:var(--green); color:var(--cream); font-size:14px; font-weight:500; letter-spacing:0.04em;
-    padding:15px 30px; border-radius:100px; text-decoration:none; }
-  .cta-btn small { display:block; font-size:10.5px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(242,232,213,0.65); margin-bottom:3px; font-weight:400; }
-  footer { background:var(--dark); padding:30px 48px; text-align:center; }
-  .footer-brand { font-size:16px; color:var(--linen); font-weight:400; letter-spacing:2px; }
-  .footer-meta { font-size:11px; color:rgba(255,255,255,.32); letter-spacing:0.8px; line-height:1.9; margin-top:8px; }
-  .footer-meta a { color:rgba(255,255,255,.5); text-decoration:none; }
-
-  .nextband { background:#fff; padding:70px 48px; text-align:center; }
-  .nextband .eyebrow { font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:var(--sage); font-weight:600; margin-bottom:16px; }
-  .nextband h2 { font-size:clamp(26px,3.4vw,38px); font-weight:400; color:var(--dark); line-height:1.2; margin-bottom:16px; font-family:'Playfair Display',serif; }
-  .nextband h2 em { font-style:italic; color:var(--taupe); }
-  .nextband p { font-family:'Times New Roman',Times,serif; font-size:15px; color:#666; font-weight:300; line-height:1.8; max-width:600px; margin:0 auto 28px; }
-  .btn-outline { display:inline-block; border:1px solid var(--green); color:var(--green); font-size:14px; font-weight:500; padding:14px 32px; border-radius:100px; text-decoration:none; }
-  .btn-outline:hover { background:var(--green); color:var(--cream); }
-
-  @media (max-width:760px) {
-    .main, .intro-letter, .offramp, .nextband, footer { padding-left:24px; padding-right:24px; }
-    .steps { grid-template-columns:1fr; }
-    .hero { min-height:60vh; }
-  }
-
-  /* italic-accent-fix: 2026-07-03 */
-  /* Italic display accents use Times New Roman. Playfair Display italic capitals (Q, J, Z) render poorly. */
-  h1 em, h2 em, h3 em, h4 em, h5 em, h6 em,
-  .section-title em, .nextband h2 em, .w-hero h2 em, .offramp h2,
-  .pull, .letter-quote, .kelsie-note-text, .opt__no {
-    font-family: 'Times New Roman', Georgia, serif;
-    font-style: italic;
-  }
-  .faq-item { max-width:660px; margin:0 auto 26px; text-align:left; }
-  .faq-item h3 { font-family:'Playfair Display',serif; font-weight:500; font-size:19px; color:var(--dark); margin-bottom:8px; }
-  .faq-item p { font-family:'Times New Roman',Times,serif; font-size:15px; color:var(--mid); font-weight:300; line-height:1.85; }
-  </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -182,24 +125,22 @@
 </script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-  <div class="nav-wrap">
-    <nav class="nav-pill">
-      <span class="nav-back">Kelsie Jimenez</span>
-      <a class="nav-cta" href="sms:8014202284">Talk to Kelsie</a>
-    </nav>
+<header class="topbar"><div class="wrap"><a class="brand" href="/">Kelsie Jimenez<span class="brand-sub">For Sale By Owner</span></a>
+<nav><a href="diy-cma.html">Pricing</a><a href="repc-walkthrough.html">Contract</a><a href="sms:8014202284">Text Kelsie</a></nav></div></header>
+
+<section class="hero-slim">
+  <img class="hero-img" src="hero.jpg" alt="A Utah County home at golden hour with the mountains behind it" />
+  <div class="hero-scrim"></div>
+  <div class="hero-inner">
+    <span class="hero-eyebrow">Sell It Yourself</span>
+    <h1 class="hero-title">How to sell a house <em>by owner</em> in Utah.</h1>
   </div>
+</section>
 
-  <section class="hero">
-    <div>
-      <p class="kicker">Sell It Yourself &middot; For Sale By Owner</p>
-      <h1>How to Sell a House <em style="font-style:italic;">By Owner</em> in Utah</h1>
-    </div>
-    <div class="hero-bar"><p>You can absolutely sell your own home. If that's your goal, here are the real tools to do it well, and someone in your corner who wants you to win.</p></div>
-  </section>
-
-  <!-- CONTENTS -->
-  <div class="contents">
+<div class="contents">
+  <div class="wrap">
     <p class="promise">Free &middot; No email &middot; No signup &middot; Nothing to unlock</p>
     <div class="clist">
       <a href="diy-cma.html">Price It Right</a>
@@ -209,226 +150,250 @@
       <a href="settlement-day.html">Closing Day</a>
     </div>
   </div>
+</div>
 
-  <div class="main">
+<main id="main">
 
-    <!-- YOU'VE GOT THIS -->
-    <div class="section">
-      <div class="section-eyebrow">Start Here</div>
-      <h2 class="section-title">You Can <em>Do This</em></h2>
-      <p class="section-body">Selling your home yourself is a real, doable thing. It's also a job with a few moving parts, so the point of this guide is to make each part simple and to be honest about what it takes.</p>
-      <p class="section-body">Work through it at your own pace. Nothing here is a pitch. It's the actual playbook I use, handed to you.</p>
-    </div>
-
-    <!-- THE TOOLS -->
-    <div class="section">
-      <div class="section-eyebrow">The Toolkit</div>
-      <h2 class="section-title">How to Sell Your Own Home, <em>Step by Step</em></h2>
-      <p class="section-body">Each one stands on its own. Start wherever you are in the process.</p>
-
-      <div class="steps">
-        <div class="step">
-          <div class="num">Step One</div>
-          <h3>Price It Right</h3>
-          <p>How to sanity-check any price, including mine. Solds versus actives, the adjustments people skip, and a quick worksheet to ballpark your number.</p>
-          <a href="diy-cma.html">Open the Quick CMA &rarr;</a>
-        </div>
-        <div class="step">
-          <div class="num">Step Two</div>
-          <h3>Know Your Numbers</h3>
-          <p>What you actually walk away with. Net out payoffs, fees, and concessions, and compare offers by real proceeds instead of the top-line price.</p>
-          <a href="seller-net-sheet.html">Run Your Numbers &rarr;</a>
-        </div>
-        <div class="step">
-          <div class="num">Step Three</div>
-          <h3>Prep It to Show</h3>
-          <p>What buyers' inspectors flag, what to fix versus disclose, lighting and decor, and where prep money actually comes back. Room by room.</p>
-          <a href="listing-prep.html">Read the Guide &rarr;</a>
-        </div>
-        <div class="step">
-          <div class="num">Step Four</div>
-          <h3>Paint &amp; Color</h3>
-          <p>The neutrals and whites that photograph best, the front door insight, and a simple sheen cheat sheet so the right finish goes on the right surface.</p>
-          <a href="paint-guide.html">Open the Paint Guide &rarr;</a>
-        </div>
-        <div class="step">
-          <div class="num">Step Five</div>
-          <h3>Market Your Home</h3>
-          <p>How to get your listing seen. The full DIY marketing checklist, plus an honest look at the reach only a licensed agent can add.</p>
-          <a href="market-your-home.html">Read the Marketing Guide &rarr;</a>
-        </div>
-        <div class="step">
-          <div class="num">Step Six</div>
-          <h3>Understand the Contract</h3>
-          <p>The Utah purchase contract in plain language, so you know exactly what an offer is asking you to agree to before you sign it.</p>
-          <a href="repc-walkthrough.html">Watch the Walkthrough &rarr;</a>
-        </div>
-        <div class="step">
-          <div class="num">Step Seven</div>
-          <h3>Disclose the Right Way</h3>
-          <p>The Seller Property Condition Disclosure in plain terms. Why disclosing protects you, what the form asks, and the one rule that keeps you out of trouble after closing.</p>
-          <a href="disclosures.html">Read the Disclosure Guide &rarr;</a>
-        </div>
-        <div class="step">
-          <div class="num">Step Eight</div>
-          <h3>Closing Day</h3>
-          <p>What happens at the closing table and after. What you sign, when the sale is final, when you get paid, and when you hand over the keys. Includes a checklist you can work through.</p>
-          <a href="settlement-day.html">Read the Closing Guide &rarr;</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- A NOTE FROM KELSIE -->
-    <div class="intro-letter">
-      <div class="letter-quote">"Let me say the part most agents won't. You do not need me to sell your house. People sell their own homes all the time, and if that's what you want, I would rather hand you everything you need to do it well than watch you guess. So that's what this is. Real tools, no gatekeeping, no pressure. Use what helps. And if you ever want a hand, you know where to find me."</div>
-      <div class="letter-sig">Kelsie Jimenez</div>
-    </div>
-
-
-    <!-- PLAIN ENGLISH WALKTHROUGH -->
-    <div class="section">
-      <div class="section-eyebrow">The Whole Process</div>
-      <h2 class="section-title">Selling By Owner in Utah, <em>Start to Finish</em></h2>
-      <p class="section-body">The cards above are the tools. This is the map: what actually happens between "let's sell it ourselves" and handing over the keys, in the order it happens.</p>
-
-      <div class="faq-item">
-        <h3>1. Decide whether selling it yourself fits your situation</h3>
-        <p>The sellers who do well on their own have two things: time to respond to calls and showings within the hour, and a timeline with some give in it. If you are relocating on a deadline or juggling a job that eats your days, that does not mean you can't do this. It means you should know it going in and plan around it.</p>
-        <p>What you save is the listing side commission. What you take on is pricing, marketing, negotiating, paperwork, and deadline tracking. Both sides of that trade are real.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>2. Price it with a real CMA, not a guess</h3>
-        <p>Almost every FSBO listing that sits is priced off the wrong number: the Zestimate, the neighbor's asking price, or what the house needs to bring to make the next move work. None of those are the market. What a buyer will pay comes from recent sold homes like yours, adjusted for condition and location.</p>
-        <p>The <a href="diy-cma.html">DIY Quick CMA</a> shows you how to pull comps and run that number yourself in about an hour. Use it to check any price anyone quotes you, including mine.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>3. Run your net sheet before you commit</h3>
-        <p>The asking price is not what you keep. Between your loan payoff, title and escrow fees, prorated property taxes, any concessions, and whatever you offer a buyer's agent, the number that lands in your account is different from the number on the sign.</p>
-        <p>The <a href="seller-net-sheet.html">net sheet</a> does that math up front. It matters twice: once when you decide whether selling makes sense, and again when two offers arrive and the higher one nets you less.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>4. Prep the house before the photos, not after</h3>
-        <p>Buyers decide fast, and their inspectors are paid to find problems. I spent years around construction before I sold homes, and the pattern holds: the money you put into the right prep comes back, and the money you put into the wrong prep does not. Deep cleaning, light, and paint pay. Major remodels on the way out the door usually do not.</p>
-        <p>The <a href="listing-prep.html">prep guide</a> goes room by room, and the <a href="paint-guide.html">paint guide</a> covers the colors that photograph well.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>5. Get the listing where buyers actually look</h3>
-        <p>Most buyers find their home on Zillow, Redfin, or Realtor.com, and all three pull from the MLS. A yard sign and a Facebook post reach your street. A flat fee MLS listing reaches everyone shopping your price range, and it is the single highest-leverage marketing dollar an FSBO seller spends.</p>
-        <p>Photos are second. Phone photos read as "project house" even when it isn't one. The <a href="market-your-home.html">marketing guide</a> has the full checklist.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>6. Understand the REPC before an offer arrives</h3>
-        <p>In Utah, the offer that shows up is the Real Estate Purchase Contract, and once you sign it, it runs the rest of the sale: deadlines, earnest money, what happens if either side walks. Most FSBO horror stories are not about price. They are about a deadline nobody was tracking.</p>
-        <p>Read the <a href="repc-walkthrough.html">REPC walkthrough</a> before you list, not the night an offer comes in. Future you will be grateful.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>7. Disclose like it protects you, because it does</h3>
-        <p>Utah sellers complete a Seller Property Condition Disclosure, and the rule I give everyone is simple: when you wonder whether something is worth mentioning, mention it. A disclosed issue is a negotiation. An undisclosed one is a phone call from a lawyer after closing.</p>
-        <p>The <a href="disclosures.html">disclosure guide</a> walks the form section by section.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>8. Let the title company carry you through closing</h3>
-        <p>Utah closes through title companies, not attorneys, and they handle more of the finish line than most sellers expect: clearing title, holding earnest money, prorating taxes, and recording the sale. Your job is to show up with ID, sign carefully, and know that the sale is final when the deed records, not when the ink dries.</p>
-        <p><a href="settlement-day.html">Closing day, start to finish</a> covers what to bring and when the money lands.</p>
-      </div>
-    </div>
-
-    <!-- COSTS -->
-    <div class="section">
-      <div class="section-eyebrow">The Numbers</div>
-      <h2 class="section-title">What Selling By Owner <em>Costs in Utah</em></h2>
-      <p class="section-body">Selling without a listing agent is not free. Plan for a flat fee MLS service, professional photos, title and escrow fees at settlement, prorated property taxes, and any repairs negotiated out of inspection. Many FSBO sellers also choose to offer buyer's agent compensation, because most Utah buyers come with an agent, and a listing that pays nothing to the person showing homes gets shown less.</p>
-      <p class="section-body">Every one of those is smaller than a listing commission. Added together they are still real money, which is why the <a href="seller-net-sheet.html">net sheet</a> comes before the yard sign.</p>
-    </div>
-
-    <!-- HONEST -->
-    <div class="section">
-      <div class="section-eyebrow">The Honest Part</div>
-      <h2 class="section-title">Is Doing It Yourself <em>Right for You?</em></h2>
-      <p class="section-body">Selling on your own can save you real money. It also asks for your time, a willingness to handle paperwork and strangers in your home, and a clear head when offers and inspections get tense.</p>
-      <div class="alert alert-sage">
-        None of that is beyond you. But before you start, it's worth being honest with yourself about two things: <strong>your time</strong> and <strong>your timeline.</strong> If you have both, this guide will carry you the whole way. If one of them is tight, that's good to know now, not three weeks in.
-      </div>
-    </div>
-
+<section>
+  <div class="wrap read">
+    <span class="label">Start here</span>
+    <h2>You can do this.</h2>
+    <p class="lede">You can absolutely sell your own home. If that's your goal, here are the real tools to do it well, and someone in your corner who wants you to win.</p>
+    <p>Selling your home yourself is a real, doable thing. It's also a job with a few moving parts, so the point of this guide is to make each part simple and to be honest about what it takes. Work through it at your own pace. Nothing here is a pitch. It's the actual playbook I use, handed to you.</p>
   </div>
+</section>
 
+<section>
+  <div class="wrap read">
+    <span class="label">The toolkit</span>
+    <h2>How to sell your own home, <em>step by step</em></h2>
+    <p class="lede">Each one stands on its own. Start wherever you are in the process.</p>
 
-    <!-- FAQ -->
-    <div class="section">
-      <div class="section-eyebrow">Real Questions</div>
-      <h2 class="section-title">Questions Utah FSBO Sellers <em>Ask Me Most</em></h2>
-
-      <div class="faq-item">
-        <h3>Can I sell my house myself in Utah without a real estate agent?</h3>
-        <p>Yes. Utah does not require a seller to use an agent, and it does not require an attorney at closing either. You will work with a title company for the actual settlement, and you will be responsible for the contract, the disclosures, and the deadlines that an agent would normally track.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>What paperwork do I need to sell a house by owner in Utah?</h3>
-        <p>The main one is the Real Estate Purchase Contract, which Utah calls the REPC. You will also need the Seller Property Condition Disclosure, a lead based paint disclosure if the home was built before 1978, and whatever your title company asks for to clear title. Buyers using an agent will usually bring their own REPC to the table. The <a href="repc-walkthrough.html">REPC walkthrough</a> and <a href="disclosures.html">disclosure guide</a> cover both in plain English.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>How much does it cost to sell a house by owner in Utah?</h3>
-        <p>You save the listing side commission, but you rarely save all of it. Most FSBO sellers still offer something to the buyer's agent, because most buyers have one. Budget for a flat fee MLS listing, photos, title and escrow fees, prorated property taxes, and any repairs that come out of inspection. The <a href="seller-net-sheet.html">net sheet page</a> walks through the actual numbers.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Do I have to put my FSBO listing on the MLS?</h3>
-        <p>You do not have to, but most of your buyer traffic comes from there. Zillow, Redfin, and Realtor.com all pull from the MLS. A flat fee MLS service gets you listed without hiring a full service agent. The <a href="market-your-home.html">marketing guide</a> covers how that works.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>What do I legally have to disclose when selling a home in Utah?</h3>
-        <p>Anything you know about the property that a buyer would reasonably want to know, including past water intrusion, foundation work, roof age and repairs, and any known defect that is not obvious on a walkthrough. When people ask me whether something is worth disclosing, the answer is almost always yes. Disclosing costs you a conversation. Not disclosing can cost you the sale after closing.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>What happens if my FSBO home does not sell?</h3>
-        <p>Usually it is priced above what the comps support, or the photos are not bringing people through the door. Both are fixable without listing with an agent. If you decide you would rather hand it off, that door stays open, and you will not have wasted the work you already did.</p>
-      </div>
+    <div class="step">
+      <div class="step-num">Step 01</div>
+      <h3>Price It Right</h3>
+      <p>How to sanity-check any price, including mine. Solds versus actives, the adjustments people skip, and a quick worksheet to ballpark your number.</p>
+      <p><a class="ed-link" href="diy-cma.html">Open the Quick CMA</a></p>
     </div>
 
-  <!-- OFF-RAMP -->
-  <div class="offramp">
-    <p class="eyebrow">If You Want a Hand</p>
+    <div class="step">
+      <div class="step-num">Step 02</div>
+      <h3>Know Your Numbers</h3>
+      <p>What you actually walk away with. Net out payoffs, fees, and concessions, and compare offers by real proceeds instead of the top-line price.</p>
+      <p><a class="ed-link" href="seller-net-sheet.html">Run Your Numbers</a></p>
+    </div>
+
+    <div class="step">
+      <div class="step-num">Step 03</div>
+      <h3>Prep It to Show</h3>
+      <p>What buyers' inspectors flag, what to fix versus disclose, lighting and decor, and where prep money actually comes back. Room by room.</p>
+      <p><a class="ed-link" href="listing-prep.html">Read the Prep Guide</a></p>
+    </div>
+
+    <div class="step">
+      <div class="step-num">Step 04</div>
+      <h3>Paint &amp; Color</h3>
+      <p>The neutrals and whites that photograph best, the front door insight, and a simple sheen cheat sheet so the right finish goes on the right surface.</p>
+      <p><a class="ed-link" href="paint-guide.html">Open the Paint Guide</a></p>
+    </div>
+
+    <div class="step">
+      <div class="step-num">Step 05</div>
+      <h3>Market Your Home</h3>
+      <p>How to get your listing seen. The full DIY marketing checklist, plus an honest look at the reach only a licensed agent can add.</p>
+      <p><a class="ed-link" href="market-your-home.html">Read the Marketing Guide</a></p>
+    </div>
+
+    <div class="step">
+      <div class="step-num">Step 06</div>
+      <h3>Understand the Contract</h3>
+      <p>The Utah purchase contract in plain language, so you know exactly what an offer is asking you to agree to before you sign it.</p>
+      <p><a class="ed-link" href="repc-walkthrough.html">Watch the Walkthrough</a></p>
+    </div>
+
+    <div class="step">
+      <div class="step-num">Step 07</div>
+      <h3>Disclose the Right Way</h3>
+      <p>The Seller Property Condition Disclosure in plain terms. Why disclosing protects you, what the form asks, and the one rule that keeps you out of trouble after closing.</p>
+      <p><a class="ed-link" href="disclosures.html">Read the Disclosure Guide</a></p>
+    </div>
+
+    <div class="step">
+      <div class="step-num">Step 08</div>
+      <h3>Closing Day</h3>
+      <p>What happens at the closing table and after. What you sign, when the sale is final, when you get paid, and when you hand over the keys. Includes a checklist you can work through.</p>
+      <p><a class="ed-link" href="settlement-day.html">Read the Closing Guide</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="band-warm">
+  <div class="wrap read">
+    <p class="pull">"Let me say the part most agents won't. You do not need me to sell your house. People sell their own homes all the time, and if that's what you want, I would rather hand you everything you need to do it well than watch you guess. So that's what this is. Real tools, no gatekeeping, no pressure. Use what helps. And if you ever want a hand, you know where to find me."</p>
+    <p class="pull-sig">Kelsie Jimenez</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap read">
+    <span class="label">The whole process</span>
+    <h2>Selling by owner in Utah, <em>start to finish</em></h2>
+    <p class="lede">The steps above are the tools. This is the map: what actually happens between "let's sell it ourselves" and handing over the keys, in the order it happens.</p>
+
+    <div class="step">
+      <div class="step-num">One</div>
+      <h3>Decide whether selling it yourself fits your situation</h3>
+      <p>The sellers who do well on their own have two things: time to respond to calls and showings within the hour, and a timeline with some give in it. If you are relocating on a deadline or juggling a job that eats your days, that does not mean you can't do this. It means you should know it going in and plan around it.</p>
+      <p>What you save is the listing side commission. What you take on is pricing, marketing, negotiating, paperwork, and deadline tracking. Both sides of that trade are real.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-num">Two</div>
+      <h3>Price it with a real CMA, not a guess</h3>
+      <p>Almost every FSBO listing that sits is priced off the wrong number: the Zestimate, the neighbor's asking price, or what the house needs to bring to make the next move work. None of those are the market. What a buyer will pay comes from recent sold homes like yours, adjusted for condition and location.</p>
+      <p>The <a href="diy-cma.html">DIY Quick CMA</a> shows you how to pull comps and run that number yourself in about an hour. Use it to check any price anyone quotes you, including mine.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-num">Three</div>
+      <h3>Run your net sheet before you commit</h3>
+      <p>The asking price is not what you keep. Between your loan payoff, title and escrow fees, prorated property taxes, any concessions, and whatever you offer a buyer's agent, the number that lands in your account is different from the number on the sign.</p>
+      <p>The <a href="seller-net-sheet.html">net sheet</a> does that math up front. It matters twice: once when you decide whether selling makes sense, and again when two offers arrive and the higher one nets you less.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-num">Four</div>
+      <h3>Prep the house before the photos, not after</h3>
+      <p>Buyers decide fast, and their inspectors are paid to find problems. I spent years around construction before I sold homes, and the pattern holds: the money you put into the right prep comes back, and the money you put into the wrong prep does not. Deep cleaning, light, and paint pay. Major remodels on the way out the door usually do not.</p>
+      <p>The <a href="listing-prep.html">prep guide</a> goes room by room, and the <a href="paint-guide.html">paint guide</a> covers the colors that photograph well.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-num">Five</div>
+      <h3>Get the listing where buyers actually look</h3>
+      <p>Most buyers find their home on Zillow, Redfin, or Realtor.com, and all three pull from the MLS. A yard sign and a Facebook post reach your street. A flat fee MLS listing reaches everyone shopping your price range, and it is the single highest-leverage marketing dollar an FSBO seller spends.</p>
+      <p>Photos are second. Phone photos read as "project house" even when it isn't one. The <a href="market-your-home.html">marketing guide</a> has the full checklist.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-num">Six</div>
+      <h3>Understand the REPC before an offer arrives</h3>
+      <p>In Utah, the offer that shows up is the Real Estate Purchase Contract, and once you sign it, it runs the rest of the sale: deadlines, earnest money, what happens if either side walks. Most FSBO horror stories are not about price. They are about a deadline nobody was tracking.</p>
+      <p>Read the <a href="repc-walkthrough.html">REPC walkthrough</a> before you list, not the night an offer comes in. Future you will be grateful.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-num">Seven</div>
+      <h3>Disclose like it protects you, because it does</h3>
+      <p>Utah sellers complete a Seller Property Condition Disclosure, and the rule I give everyone is simple: when you wonder whether something is worth mentioning, mention it. A disclosed issue is a negotiation. An undisclosed one is a phone call from a lawyer after closing.</p>
+      <p>The <a href="disclosures.html">disclosure guide</a> walks the form section by section.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-num">Eight</div>
+      <h3>Let the title company carry you through closing</h3>
+      <p>Utah closes through title companies, not attorneys, and they handle more of the finish line than most sellers expect: clearing title, holding earnest money, prorating taxes, and recording the sale. Your job is to show up with ID, sign carefully, and know that the sale is final when the deed records, not when the ink dries.</p>
+      <p><a href="settlement-day.html">Closing day, start to finish</a> covers what to bring and when the money lands.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap read">
+    <span class="label">The numbers</span>
+    <h2>What selling by owner <em>costs in Utah</em></h2>
+    <p>Selling without a listing agent is not free. Plan for a flat fee MLS service, professional photos, title and escrow fees at settlement, prorated property taxes, and any repairs negotiated out of inspection. Many FSBO sellers also choose to offer buyer's agent compensation, because most Utah buyers come with an agent, and a listing that pays nothing to the person showing homes gets shown less.</p>
+    <p>Every one of those is smaller than a listing commission. Added together they are still real money, which is why the <a href="seller-net-sheet.html">net sheet</a> comes before the yard sign.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap read">
+    <span class="label">The honest part</span>
+    <h2>Is doing it yourself <em>right for you?</em></h2>
+    <p>Selling on your own can save you real money. It also asks for your time, a willingness to handle paperwork and strangers in your home, and a clear head when offers and inspections get tense.</p>
+    <div class="panel">
+      <p class="fine">None of that is beyond you. But before you start, it's worth being honest with yourself about two things: <strong>your time</strong> and <strong>your timeline.</strong> If you have both, this guide will carry you the whole way. If one of them is tight, that's good to know now, not three weeks in.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band-warm">
+  <div class="wrap read">
+    <span class="label">Real questions</span>
+    <h2>Questions Utah FSBO sellers <em>ask me most</em></h2>
+
+    <div class="step">
+      <h3>Can I sell my house myself in Utah without a real estate agent?</h3>
+      <p>Yes. Utah does not require a seller to use an agent, and it does not require an attorney at closing either. You will work with a title company for the actual settlement, and you will be responsible for the contract, the disclosures, and the deadlines that an agent would normally track.</p>
+    </div>
+
+    <div class="step">
+      <h3>What paperwork do I need to sell a house by owner in Utah?</h3>
+      <p>The main one is the Real Estate Purchase Contract, which Utah calls the REPC. You will also need the Seller Property Condition Disclosure, a lead based paint disclosure if the home was built before 1978, and whatever your title company asks for to clear title. Buyers using an agent will usually bring their own REPC to the table. The <a href="repc-walkthrough.html">REPC walkthrough</a> and <a href="disclosures.html">disclosure guide</a> cover both in plain English.</p>
+    </div>
+
+    <div class="step">
+      <h3>How much does it cost to sell a house by owner in Utah?</h3>
+      <p>You save the listing side commission, but you rarely save all of it. Most FSBO sellers still offer something to the buyer's agent, because most buyers have one. Budget for a flat fee MLS listing, photos, title and escrow fees, prorated property taxes, and any repairs that come out of inspection. The <a href="seller-net-sheet.html">net sheet page</a> walks through the actual numbers.</p>
+    </div>
+
+    <div class="step">
+      <h3>Do I have to put my FSBO listing on the MLS?</h3>
+      <p>You do not have to, but most of your buyer traffic comes from there. Zillow, Redfin, and Realtor.com all pull from the MLS. A flat fee MLS service gets you listed without hiring a full service agent. The <a href="market-your-home.html">marketing guide</a> covers how that works.</p>
+    </div>
+
+    <div class="step">
+      <h3>What do I legally have to disclose when selling a home in Utah?</h3>
+      <p>Anything you know about the property that a buyer would reasonably want to know, including past water intrusion, foundation work, roof age and repairs, and any known defect that is not obvious on a walkthrough. When people ask me whether something is worth disclosing, the answer is almost always yes. Disclosing costs you a conversation. Not disclosing can cost you the sale after closing.</p>
+    </div>
+
+    <div class="step">
+      <h3>What happens if my FSBO home does not sell?</h3>
+      <p>Usually it is priced above what the comps support, or the photos are not bringing people through the door. Both are fixable without listing with an agent. If you decide you would rather hand it off, that door stays open, and you will not have wasted the work you already did.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap read">
+    <span class="label">If you want a hand</span>
     <h2>This was never all or nothing.</h2>
     <p>Maybe you start and realize you'd rather not do it alone. Maybe your timeline just got real. That isn't failing, it's just information. Whenever you want, here's how I can step in, at whatever level you actually need.</p>
-    <a class="btn-green" href="seller-advantage.html">See the Seller Advantage Program &rarr;</a>
+    <p><a class="ed-link" href="seller-advantage.html">See the Seller Advantage Program</a></p>
   </div>
+</section>
 
-  <!-- BUY NEXT -->
-  <div class="nextband">
-    <p class="eyebrow">Wherever You Land Next</p>
+<section>
+  <div class="wrap read">
+    <span class="label">Wherever you land next</span>
     <h2>Selling this one yourself? Let me help with the <em>next</em> one.</h2>
     <p>Here's the part people don't expect: doing it yourself on this sale has nothing to do with the buy side. Most people selling a home are buying the next one, and that is a place I would genuinely love to help. When you're ready to find what's next, I can represent you as your buyer's agent and handle that half start to finish.</p>
-    <a class="btn-outline" href="https://guide.kelsiejimenez.com/before-you-offer.html">See the buyer's roadmap &rarr;</a>
+    <p><a class="ed-link" href="https://guide.kelsiejimenez.com/before-you-offer.html">See the buyer's roadmap</a></p>
   </div>
+</section>
 
-  <!-- KELSIE NOTE -->
-  <div class="kelsie-note">
-    <div class="inner">
-      <div class="kelsie-note-text">"I would rather you sell your home yourself and keep more of your money than talk you out of it to win a listing. That's the whole reason this guide exists. Use it. And if you want me, I'm one text away."</div>
-      <div class="kelsie-note-sig">Kelsie Jimenez &nbsp;&middot;&nbsp; 801.420.2284</div>
+<section class="band-warm">
+  <div class="wrap read">
+    <p class="pull">"I would rather you sell your home yourself and keep more of your money than talk you out of it to win a listing. That's the whole reason this guide exists. Use it. And if you want me, I'm one text away."</p>
+    <p class="pull-sig">Kelsie Jimenez &middot; 801.420.2284</p>
+    <p><a class="ed-link" href="sms:8014202284">Text me anytime</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="fname">Kelsie Jimenez<span>The Perry Group &middot; Real Broker LLC</span></div>
+      <p class="contact"><a href="tel:8014202284">(801) 420-2284</a><br><a href="https://kelsiejimenez.com">kelsiejimenez.com</a></p>
+    </div>
+    <div>
+      <p class="disclaimer">License #11407496-SA00. This guide is educational and is not legal advice. Reading it does not create an agency or client relationship.</p>
     </div>
   </div>
-
-  <div class="cta-wrap">
-    <a class="cta-btn" href="sms:8014202284"><small>A question, not a commitment?</small>Text me anytime &rarr;</a>
-  </div>
-
-  <footer>
-    <div class="footer-brand">Kelsie Jimenez</div>
-    <div class="footer-meta">The Perry Group &middot; Real Broker LLC &middot; License #11407496-SA00<br><a href="tel:8014202284">(801) 420-2284</a> &middot; <a href="https://kelsiejimenez.com">kelsiejimenez.com</a></div>
-  </footer>
+</footer>
 
 </body>
 </html>
